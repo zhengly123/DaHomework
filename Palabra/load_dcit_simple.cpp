@@ -1,15 +1,15 @@
-#include "load_txt_simple.h"
+#include "load_dict_simple.h"
 
-LoadTxtSimple::LoadTxtSimple()
+LoadDictSimple::LoadDictSimple()
 {
 }
 
 
-LoadTxtSimple::~LoadTxtSimple()
+LoadDictSimple::~LoadDictSimple()
 {
 }
 
-const Dict LoadTxtSimple::Load(const std::string & path)
+const Dict LoadDictSimple::Load(const std::string & path)
 {
 	std::string word_spelling, PoS, translation, sentence;
 	std::ifstream is(path);

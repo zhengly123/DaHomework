@@ -1,10 +1,11 @@
 #include "operation.h"
 using namespace std;
 
-Operation::Operation()
+Operation::Operation(std::string command_name, std::string command_abbreviation,
+	std::string help) :command_name_(command_name),
+	command_abbreviation_(command_abbreviation), help_(help)
 {
 }
-
 
 Operation::~Operation()
 {

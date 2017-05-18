@@ -1,7 +1,7 @@
 ﻿#include<fstream>
-#include"word_dict.h"
-#include"load_txt_simple.h"
-#include"logger_simple.h"
+//#include"word_dict.h"
+//#include"load_dict_simple.h"
+//#include"logger_simple.h"
 #include"shell_windows.h"
 using namespace std;
 
@@ -25,7 +25,7 @@ int main()
 	//o << t;
 	
 	//Debug词典类
-	//LoadTxtSimple load;
+	//LoadDictSimple load;
 	//const Dict dict(load.Load("dict_txt_simple.txt"));
 	//auto list = dict.WordList();
 	//for (auto i = dict.cbegin(); i != dict.cend(); ++i)

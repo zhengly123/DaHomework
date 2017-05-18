@@ -24,12 +24,6 @@
     <ClCompile Include="dict.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="load_strategy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="load_txt_simple.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,6 +37,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="operation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="operation_search.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="load_dict_strategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="load_dcit_simple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -62,12 +65,6 @@
     <ClInclude Include="dict.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="load_strategy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="load_txt_simple.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -84,6 +81,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="operation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="operation_search.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="load_dict_strategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="load_dict_simple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
