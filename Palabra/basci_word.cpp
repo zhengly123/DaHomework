@@ -1,6 +1,6 @@
-#include "word_dict.h"
+#include "basci_word.h"
 
-void operator<<(std::ostream & o, const WordDict & word)
+void operator<<(std::ostream & o, const BasicWord & word)
 {
 	o << word.word << "\t[" << word.phonetic << "]" << std::endl;
 	for (auto &i : word.meaning)

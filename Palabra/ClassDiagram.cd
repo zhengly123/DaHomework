@@ -1,73 +1,115 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Dict" Collapsed="true">
-    <Position X="10.5" Y="1" Width="1.5" />
+  <Class Name="LoadBasicDictSimple" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABAAAAAgAAAAAACAAAAAAAAAgAwAgA=</HashCode>
-      <FileName>dict.h</FileName>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAABAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>load_basic_dict_simple.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LoadTxtSimple" Collapsed="true">
-    <Position X="3.5" Y="1.75" Width="1.5" />
+  <Class Name="LoadBasicDictStrategy" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAgAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>load_txt_simple.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LoadStrategy" Collapsed="true">
-    <Position X="3.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAACAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
-      <FileName>load_strategy.h</FileName>
+      <HashCode>AAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>load_basic_dict_strategy.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Logger" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAAAIAAAAAAAAAAAAAAAAACAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAQQAAAAAAYAAAAAAAAAAAAAAAAACAAAAAAQAAAAAAA=</HashCode>
       <FileName>logger.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LoggerSimple" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+    <Position X="4.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAAAIAAAAAAAAAAAAAAAAEAAAACAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>gAQAAAIAAAQAAAAAAAAAAAAEAAAACAAAAAAQAAAAAAA=</HashCode>
       <FileName>logger_simple.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Operation" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgIAAAAAAAAAQQAAAAAAAAAAAAAAABAAEEAYAAAAA=</HashCode>
+      <FileName>operation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OperationSearch" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAQAAAAAAAAAACAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>operation_search.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShellWindows" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEAAAAAQAIAIAAAEQAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>shell_windows.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="User" Collapsed="true">
-    <Position X="6.25" Y="1" Width="1.5" />
+    <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAEAAAABAAAAAAEAAAAAAAAAAAAAAiAAAAA=</HashCode>
       <FileName>user.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="LoadUserDictStrategy" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAgBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>load_user_dict_strategy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DictTemplate&lt;T&gt;">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAABAAABAAAAAAAAAAgACAAAAAAAAAgAwAAA=</HashCode>
+      <FileName>dict_template.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserDict">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>user_dict.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadUserDictSimple" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAgIAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>load_user_dict_simple.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Struct Name="Meaning" Collapsed="true">
-    <Position X="10.5" Y="2.5" Width="1.5" />
+    <Position X="12" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAIAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>meaning.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="Sentence" Collapsed="true">
-    <Position X="10.5" Y="3.25" Width="1.5" />
+    <Position X="12" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>sentence.h</FileName>
     </TypeIdentifier>
   </Struct>
-  <Struct Name="WordDict" Collapsed="true">
-    <Position X="10.5" Y="1.75" Width="1.5" />
+  <Struct Name="BasicWord">
+    <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACABAAAAAAQAAAAgAAAAAAAACIAAAAAAAAAAAAA=</HashCode>
-      <FileName>word_dict.h</FileName>
+      <FileName>basci_word.h</FileName>
     </TypeIdentifier>
   </Struct>
-  <Struct Name="WordUser" Collapsed="true">
-    <Position X="8" Y="1" Width="1.5" />
+  <Struct Name="UserWord" Collapsed="true">
+    <Position X="10" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAACAAAgAAAAgAAAAAIAAAAAAACAAAAAAAAAIAAAA=</HashCode>
-      <FileName>word_user.h</FileName>
+      <HashCode>AQAAACABAgAAAAgAAAAAIAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>user_word.h</FileName>
     </TypeIdentifier>
   </Struct>
   <Font Name="Segoe UI" Size="9" />
