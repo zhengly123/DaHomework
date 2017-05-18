@@ -1,12 +1,12 @@
 #pragma once
-#ifndef WORD_DICT_H
-#define WORD_DICT_H
+#ifndef BASIC_WORD_H
+#define BASIC_WORD_H
 #include<string>
 #include<vector>
 #include<iostream>
 #include"meaning.h"
 //字典中的单词类（存储字典中的信息)。若为空，表示不存在。
-struct WordDict
+struct BasicWord
 {
 	//英文单词
 	std::string word;
@@ -17,9 +17,9 @@ struct WordDict
 	//字典标签，例如CET-4
 	std::vector<std::string> tag;
 	//重载流输出
-	friend void operator<<(std::ostream &o, const WordDict &worddict);
+	friend void operator<<(std::ostream &o, const BasicWord &basic_word);
 	//根据单词字母序排序
-	friend bool operator<(const WordDict& a, const WordDict& b);
+	friend bool operator<(const BasicWord& a, const BasicWord& b);
 	inline operator std::string() { return word; }
 };
 
@@ -27,8 +27,8 @@ struct WordDict
 //**************************
 //the definition of inline functions
 //**************************
-inline bool operator<(const WordDict &a, const WordDict &b)
+inline bool operator<(const BasicWord &a, const BasicWord &b)
 {
 	return a.word < b.word;
 }
-#endif // !WORD_DICT_H
+#endif // !BASIC_WORD_H

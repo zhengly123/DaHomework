@@ -1,7 +1,9 @@
 ﻿#include<fstream>
-//#include"word_dict.h"
+//#include"basci_word.h"
 //#include"load_dict_simple.h"
 //#include"logger_simple.h"
+#include"user_dict.h"
+#include"user_word.h"
 #include"shell_windows.h"
 using namespace std;
 
@@ -13,10 +15,13 @@ void run()
 
 int main()
 {
-	run();
+	//run();
+	//UserDict t;
+	UserWord t;
+
 	//std::ofstream os("out.txt");
 	//Debug单词类
-	//WordDict t,t2;
+	//BasicWord t,t2;
 	//t2.word = "mother";
 	//t.word = "father";
 	//t.meaning.push_back({ "noun","爸爸","I'm your father!" });
@@ -25,8 +30,8 @@ int main()
 	//o << t;
 	
 	//Debug词典类
-	//LoadDictSimple load;
-	//const Dict dict(load.Load("dict_txt_simple.txt"));
+	//LoadBasicDictSimple load;
+	//const BasicDict dict(load.Load("dict_txt_simple.txt"));
 	//auto list = dict.WordList();
 	//for (auto i = dict.cbegin(); i != dict.cend(); ++i)
 	//	os << *i;

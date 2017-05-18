@@ -1,23 +1,23 @@
-#include "load_dict_simple.h"
+#include "load_basic_dict_simple.h"
 
-LoadDictSimple::LoadDictSimple()
+LoadBasicDictSimple::LoadBasicDictSimple()
 {
 }
 
 
-LoadDictSimple::~LoadDictSimple()
+LoadBasicDictSimple::~LoadBasicDictSimple()
 {
 }
 
-const Dict LoadDictSimple::Load(const std::string & path)
+const BasicDict LoadBasicDictSimple::Load(const std::string & path)
 {
 	std::string word_spelling, PoS, translation, sentence;
 	std::ifstream is(path);
-	std::set<WordDict> dict;
-	WordDict word;
+	std::set<BasicWord> dict;
 	Meaning meaning;
 	while (is)
 	{
+		BasicWord word = {};
 		getline(is, word.word);
 		getline(is, meaning.part_of_speech);
 		getline(is, meaning.chinese_meaning);
@@ -26,5 +26,5 @@ const Dict LoadDictSimple::Load(const std::string & path)
 		word.meaning.push_back(meaning);
 		dict.insert(word);
 	}
-	return Dict(std::move(dict));
+	return BasicDict(std::move(dict));
 }

@@ -13,3 +13,9 @@
 	TODOs
 	1.shell中的搜索、测试模块
 	2.user setting模块
+### 2017年5月19日00:01:07 zly
+	Changes
+	1.重构word、dict等接口
+	TODOs
+	1.shell中的搜索、测试模块
+	2.user setting模块

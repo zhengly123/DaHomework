@@ -142,9 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="dict.cpp" />
-    <ClCompile Include="load_dcit_simple.cpp" />
-    <ClCompile Include="load_dict_strategy.cpp" />
+    <ClCompile Include="user_dict.cpp" />
+    <ClCompile Include="load_basic_dcit_simple.cpp" />
+    <ClCompile Include="load_basic_dict_strategy.cpp" />
+    <ClCompile Include="load_user_dict_simple.cpp" />
+    <ClCompile Include="load_user_dict_strategy.cpp" />
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="logger_simple.cpp" />
     <ClCompile Include="main.cpp" />
@@ -152,12 +154,16 @@
     <ClCompile Include="operation_search.cpp" />
     <ClCompile Include="shell_windows.cpp" />
     <ClCompile Include="user.cpp" />
-    <ClCompile Include="word_dict.cpp" />
+    <ClCompile Include="basci_word.cpp" />
+    <ClCompile Include="user_word.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="dict.h" />
-    <ClInclude Include="load_dict_simple.h" />
-    <ClInclude Include="load_dict_strategy.h" />
+    <ClInclude Include="basic_dict.h" />
+    <ClInclude Include="dict_template.h" />
+    <ClInclude Include="load_basic_dict_simple.h" />
+    <ClInclude Include="load_basic_dict_strategy.h" />
+    <ClInclude Include="load_user_dict_simple.h" />
+    <ClInclude Include="load_user_dict_strategy.h" />
     <ClInclude Include="logger.h" />
     <ClInclude Include="logger_simple.h" />
     <ClInclude Include="meaning.h" />
@@ -166,9 +172,10 @@
     <ClInclude Include="sentence.h" />
     <ClInclude Include="shell_windows.h" />
     <ClInclude Include="user.h" />
+    <ClInclude Include="user_dict.h" />
     <ClInclude Include="word%28empty%29.h" />
-    <ClInclude Include="word_dict.h" />
-    <ClInclude Include="word_user.h" />
+    <ClInclude Include="basci_word.h" />
+    <ClInclude Include="user_word.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="dict_txt_simple.txt" />
