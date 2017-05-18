@@ -143,24 +143,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dict.cpp" />
-    <ClCompile Include="load_txt_simple.cpp" />
-    <ClCompile Include="load_strategy.cpp" />
+    <ClCompile Include="load_dcit_simple.cpp" />
+    <ClCompile Include="load_dict_strategy.cpp" />
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="logger_simple.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="operation.cpp" />
+    <ClCompile Include="operation_search.cpp" />
     <ClCompile Include="shell_windows.cpp" />
     <ClCompile Include="user.cpp" />
     <ClCompile Include="word_dict.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dict.h" />
-    <ClInclude Include="load_txt_simple.h" />
-    <ClInclude Include="load_strategy.h" />
+    <ClInclude Include="load_dict_simple.h" />
+    <ClInclude Include="load_dict_strategy.h" />
     <ClInclude Include="logger.h" />
     <ClInclude Include="logger_simple.h" />
     <ClInclude Include="meaning.h" />
     <ClInclude Include="operation.h" />
+    <ClInclude Include="operation_search.h" />
     <ClInclude Include="sentence.h" />
     <ClInclude Include="shell_windows.h" />
     <ClInclude Include="user.h" />

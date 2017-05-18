@@ -17,7 +17,8 @@
 class Operation
 {
 public:
-	Operation();
+	Operation(std::string command_name, std::string command_abbreviation,
+		std::string help);
 	virtual ~Operation();
 	const std::string command_name_;
 	const std::string command_abbreviation_;

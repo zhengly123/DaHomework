@@ -10,5 +10,7 @@ public:
 	virtual ~Logger();
 	virtual bool Login(const User &user) = 0;
 	virtual bool Signup(const User &user) = 0;
+	virtual bool load_user_list() = 0;
+	virtual bool save_user_list() = 0;
 };
 

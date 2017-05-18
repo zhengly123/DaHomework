@@ -6,5 +6,10 @@
 	2.完成词库、搜索等功能
 	TODOs
 	1.user的sign up模块
-	2.shell中的搜索、测试模块
-	3.user setting模块
+### 2017年5月18日18:20:02 zly
+	Changes
+	1.实现sign up模块
+	2.修复ShellWindows中逻辑错误
+	TODOs
+	1.shell中的搜索、测试模块
+	2.user setting模块

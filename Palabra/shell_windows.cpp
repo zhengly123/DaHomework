@@ -1,10 +1,12 @@
 #include"shell_windows.h"
 #include"logger_simple.h"
+#include"operation_search.h"
 using namespace std;
 
-vector<Operation> AllOperation{};
+//所有操作的数组
+const vector<Operation*> AllOperation{ new OperationSearch() };
 
-ShellWindows::ShellWindows()
+ShellWindows::ShellWindows() :Operation("", "", "The kernel process")
 {
 }
 
@@ -16,15 +18,15 @@ void ShellWindows::Execute(const std::vector<std::string>&)
 {
 	vector<string> command;
 	PrintWelcome();
+	Login();//登录
+	PrintHelp();
 	while (1)
 	{
-		Login();//登陆
-
-		PrintHelp();
-		bool find_operation = 1;
+		bool find_operation = false;
+		cout << "(plb) ";//
 		command = InputCommand();
 		if (command.size() == 0)
-			break;
+			continue;
 		else if (command[0] == "quit" || command[0] == "q")
 			break;
 		else if (command[0] == "help" || command[0] == "h")
@@ -33,14 +35,15 @@ void ShellWindows::Execute(const std::vector<std::string>&)
 		{
 			for (auto &i : AllOperation)
 			{
-				if (i.command_name_ == command[0] || i.command_name_ == command[0])
+				if (i->command_name_ == command[0] 
+					|| i->command_abbreviation_ == command[0])
 				{
 					find_operation = true;
-					i.Execute(command);
+					i->Execute(command);
 				}
 			}
 			if (!find_operation)
-				cout << "No command named\"" << command[0] << "is found";
+				cout << "\"" << command[0] << "\"is not a command" << endl;
 		}
 	}
 }
@@ -51,10 +54,10 @@ void ShellWindows::PrintHelp() const
 	cout << "------------Mannul of Palabra------------" << endl;
 	for (const auto &i : AllOperation)
 	{
-		cout << i.command_name_ << "\t(" << i.command_abbreviation_ << ")\t" 
-			<< i.help_ << endl;
+		cout << i->command_name_ << "\t(" << i->command_abbreviation_ << ")\t"
+			<< i->help_ << endl;
 	}
-	cout << "--------------ENd of Mannul--------------" << endl;
+	cout << "--------------End of Mannul--------------" << endl;
 }
 
 void ShellWindows::PrintLoginInformation() const
