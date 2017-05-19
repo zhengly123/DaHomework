@@ -9,7 +9,7 @@ public:
 	LoadUserDictSimple();
 	virtual ~LoadUserDictSimple();
 	virtual UserDict Load(const std::string &path) override;
-	virtual bool Save(UserDict);
+	virtual bool Save(const std::string path, const UserDict& user_dict) override;
 };
 
 #endif  // !LOAD_USERDATA_SIMPLE_H

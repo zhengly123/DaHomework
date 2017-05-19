@@ -121,6 +121,9 @@
     <Text Include="dict_txt_simple.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="userdata_zly.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="user_simple.ini">

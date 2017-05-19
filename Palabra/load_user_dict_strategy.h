@@ -13,7 +13,7 @@ public:
 	virtual ~LoadUserDictStrategy();
 	//¼ÓÔØ´ÊµäÎÄ¼ş
 	virtual UserDict Load(const std::string &path) = 0;
-	virtual bool Save(const UserDict& user_dict) = 0;
+	virtual bool Save(const std::string path, const UserDict& user_dict) = 0;
 };
 
 #endif  // !LOAD_USERDATA_STRATEGY_H

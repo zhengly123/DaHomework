@@ -19,3 +19,8 @@
 	TODOs
 	1.shell中的搜索、测试模块
 	2.user setting模块
+### 2017年5月19日10:23:23 zly
+	Changes
+	1.完成user setting模块
+	TODOs
+	1.shell中的搜索、测试模块
