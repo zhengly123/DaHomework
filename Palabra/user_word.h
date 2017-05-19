@@ -7,6 +7,7 @@
 //用户的单词类（存储用户关于单词的信息）
 //输入顺序为:
 //word
+//tag
 //note
 //review_num error_num last_appear_time importance
 struct UserWord
