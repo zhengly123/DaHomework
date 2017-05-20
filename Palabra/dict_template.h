@@ -17,7 +17,7 @@ public:
 	//Copy is not allowed
 	DictTemplate operator=(DictTemplate &&orig) noexcept = delete;
 	virtual ~DictTemplate();
-	void insert(const T &word);//dict插入
+	void insert(const T &word);//dict插入，若已经存在，则会覆盖
 
 	const typename std::set<T>::const_iterator cbegin() const;
 	const typename std::set<T>::const_iterator cend() const;
@@ -25,7 +25,7 @@ public:
 	//查找单词
 	const T& Search(const std::string& word) const;
 	//导出单词列表
-	const ListType WordList() const;
+	const ListType ToWordList() const;
 private:
 	const T EmptyObject;
 };
@@ -70,7 +70,7 @@ const T& DictTemplate<T>::Search(const std::string & word) const
 }
 
 template<typename T>
-const ListType DictTemplate<T>::WordList() const
+const ListType DictTemplate<T>::ToWordList() const
 {
 	std::vector<std::string> wordlist;
 	for (auto i : dict_)

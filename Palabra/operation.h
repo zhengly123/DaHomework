@@ -28,8 +28,6 @@ public:
 	// ÷¥––√¸¡Ó
 	virtual void Execute(const std::vector<std::string> &parameter) = 0;
 protected:
-	BasicDict basic_dict_;
-	UserDict user_dict_;
 
 	std::vector<std::string> InputCommand() const;
 	// «Â∆¡

@@ -7,10 +7,12 @@ class OperationMemorize :
 	public Operation
 {
 public:
-	OperationMemorize();
+	OperationMemorize(const BasicDict &basic_dict, UserDict &user_dict);
 	virtual ~OperationMemorize();
 	virtual void Execute(const std::vector<std::string> &parameter) override;
 protected:
+	const BasicDict& basic_dict_;
+	UserDict& user_dict_;
 	virtual void PrintHelp() const override;
 };
 

@@ -21,7 +21,7 @@ using BasicDict = DictTemplate<BasicWord>;
 //	//查找单词
 //	BasicWord Search(const std::string& word) const;
 //	//导出单词列表
-//	const std::vector<std::string> WordList() const;
+//	const std::vector<std::string> ToWordList() const;
 //};
 
 //**************************

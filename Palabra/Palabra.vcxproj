@@ -143,6 +143,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="operation_memorize.cpp" />
+    <ClCompile Include="select_word_bcz..cpp" />
+    <ClCompile Include="select_word_interface.cpp" />
     <ClCompile Include="user_dict.cpp" />
     <ClCompile Include="load_basic_dcit_simple.cpp" />
     <ClCompile Include="load_basic_dict_strategy.cpp" />
@@ -171,6 +173,8 @@
     <ClInclude Include="operation.h" />
     <ClInclude Include="operation_memorize.h" />
     <ClInclude Include="operation_search.h" />
+    <ClInclude Include="select_word_bcz.h" />
+    <ClInclude Include="select_word_interface.h" />
     <ClInclude Include="sentence.h" />
     <ClInclude Include="shell_windows.h" />
     <ClInclude Include="user.h" />
