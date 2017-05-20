@@ -9,7 +9,7 @@
 //word
 //tag
 //note
-//review_num error_num last_appear_time importance
+//review_num error_num last_appear_time importance（-1表示不再出现）
 struct UserWord
 {
 	std::string word;
@@ -21,7 +21,7 @@ struct UserWord
 	int importance;//[1,5]
 	friend bool operator<(const UserWord& a, const UserWord& b);
 	//重载流输出
-	friend void operator<<(std::ostream &o, const UserWord &user_word);
+	friend std::ostream &operator<<(std::ostream &o, const UserWord &user_word);
 	//根据单词字母序排序
 	friend bool operator<(const UserWord& a, const UserWord& b);
 };

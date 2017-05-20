@@ -4,7 +4,7 @@
 using namespace std;
 
 //所有操作的数组
-const vector<Operation*> AllOperation{ new OperationSearch() };
+vector<Operation*> AllOperation{};
 
 ShellWindows::ShellWindows() :Operation("", "", "The kernel process")
 {
@@ -18,7 +18,11 @@ void ShellWindows::Execute(const std::vector<std::string>&)
 {
 	vector<string> command;
 	PrintWelcome();
+	
 	Login();//登录
+	Load(basic_dict_, user_dict_);//载入数据
+	AllOperation.push_back(new OperationSearch(basic_dict_, user_dict_));
+
 	PrintHelp();
 	while (1)
 	{
@@ -40,12 +44,14 @@ void ShellWindows::Execute(const std::vector<std::string>&)
 				{
 					find_operation = true;
 					i->Execute(command);
+					ClearScreen();
 				}
 			}
 			if (!find_operation)
 				cout << "\"" << command[0] << "\"is not a command" << endl;
 		}
 	}
+	Save(user_dict_);
 }
 
 // 输出帮助
@@ -78,6 +84,8 @@ void ShellWindows::Login()
 
 	while (!mode)
 	{
+		//TODO:在外面新建变量，Load(引用类型)
+		//注意初始化
 		PrintLoginInformation();
 		input = InputCommand();
 		if (input[0] == "1")
@@ -119,6 +127,22 @@ void ShellWindows::Login()
 		Pause();
 		ClearScreen();
 	}
+}
+
+void ShellWindows::Load(BasicDict &basic_dict, UserDict &user_dict)
+{
+	LoadBasicDictSimple load_basic_dict_simple;
+	LoadUserDictSimple load_user_dict_simple;
+	bool basic_dict_status = load_basic_dict_simple.Load("dict_txt_simple.txt", basic_dict);
+	bool user_dict_status = load_user_dict_simple.Load("userdata_" + username_ + ".txt", user_dict);
+	//TODO:exception handle
+	basic_dict_status = user_dict_status = 0;//avoid the warning.
+}
+
+void ShellWindows::Save(UserDict & user_dict)
+{
+	LoadUserDictSimple load_user_dict_simple;
+	load_user_dict_simple.Save("userdata_" + username_ + ".txt", user_dict);
 }
 
 void ShellWindows::PrintWelcome() const

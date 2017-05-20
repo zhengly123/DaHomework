@@ -142,7 +142,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="operation_memorize.cpp" />
     <ClCompile Include="user_dict.cpp" />
     <ClCompile Include="load_basic_dcit_simple.cpp" />
     <ClCompile Include="load_basic_dict_strategy.cpp" />
@@ -155,7 +154,7 @@
     <ClCompile Include="operation_search.cpp" />
     <ClCompile Include="shell_windows.cpp" />
     <ClCompile Include="user.cpp" />
-    <ClCompile Include="basic_word.cpp" />
+    <ClCompile Include="basci_word.cpp" />
     <ClCompile Include="user_word.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -169,14 +168,13 @@
     <ClInclude Include="logger_simple.h" />
     <ClInclude Include="meaning.h" />
     <ClInclude Include="operation.h" />
-    <ClInclude Include="operation_memorize.h" />
     <ClInclude Include="operation_search.h" />
     <ClInclude Include="sentence.h" />
     <ClInclude Include="shell_windows.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="user_dict.h" />
     <ClInclude Include="word%28empty%29.h" />
-    <ClInclude Include="basic_word.h" />
+    <ClInclude Include="basci_word.h" />
     <ClInclude Include="user_word.h" />
   </ItemGroup>
   <ItemGroup>

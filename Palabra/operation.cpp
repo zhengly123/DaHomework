@@ -1,5 +1,10 @@
 #include "operation.h"
 using namespace std;
+////----------------------------
+////definition of static varible
+////----------------------------
+//BasicDict Operation::BasicDict;
+//UserDict Operation::user_dict;
 
 Operation::Operation(std::string command_name, std::string command_abbreviation,
 	std::string help) :command_name_(command_name),

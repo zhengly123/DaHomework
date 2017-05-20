@@ -1,11 +1,13 @@
 ﻿#include<fstream>
-//#include"basci_word.h"
+//#include"basic_word.h"
 //#include"load_dict_simple.h"
 //#include"logger_simple.h"
 #include"user_dict.h"
 #include"user_word.h"
 #include"shell_windows.h"
 #include"load_user_dict_simple.h"
+#include"operation_search.h"
+#include"shell_windows.h"
 using namespace std;
 
 void run()
@@ -16,7 +18,8 @@ void run()
 
 int main()
 {
-	//run();
+	run();
+
 	//UserDict t;
 
 	//std::ofstream os("out.txt");
@@ -48,17 +51,17 @@ int main()
 	cout << "Log in successfully" << endl;*/
 
 	//Debug用户数据存储
-	UserDict a({});
-	UserWord word;
-	LoadUserDictSimple load;
-	word.word = "father";
-	word.tag.push_back("Favorite");
-	word.note.push_back("This is the most important word!");
-	word.error_num = 1, word.importance = 5, word.last_appear_time = 111;
-	word.review_num = 1;
-	a.insert(word);
-	load.Save("userdata_zly.txt", a);
-	auto t = load.Load("userdata_zly.txt");
-	puts("-=-=-=-=-=-=-");
-	cout << *(t.cbegin());
+	//UserDict a({});
+	//UserWord word;
+	//LoadUserDictSimple load;
+	//word.word = "father";
+	//word.tag.push_back("Favorite");
+	//word.note.push_back("This is the most important word!");
+	//word.error_num = 1, word.importance = 5, word.last_appear_time = 111;
+	//word.review_num = 1;
+	//a.insert(word);
+	//load.Save("userdata_zly.txt", a);
+	//load.Load("userdata_zly.txt", a);
+	//puts("-=-=-=-=-=-=-");
+	//cout << *(a.cbegin());
 }

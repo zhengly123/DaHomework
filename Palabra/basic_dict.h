@@ -1,5 +1,5 @@
 #pragma once
-#include"basci_word.h"
+#include"basic_word.h"
 #include"set"
 #include"dict_template.h"
 using BasicDict = DictTemplate<BasicWord>;

@@ -17,10 +17,11 @@ struct BasicWord
 	//字典标签，例如CET-4
 	std::vector<std::string> tag;
 	//重载流输出
-	friend void operator<<(std::ostream &o, const BasicWord &basic_word);
+	friend std::ostream &operator<<(std::ostream &o, const BasicWord &basic_word);
 	//根据单词字母序排序
 	friend bool operator<(const BasicWord& a, const BasicWord& b);
 	inline operator std::string() { return word; }
+	inline bool empty() const { return word.empty(); }
 };
 
 

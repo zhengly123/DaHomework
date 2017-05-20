@@ -24,3 +24,12 @@
 	1.完成user setting模块
 	TODOs
 	1.shell中的搜索、测试模块
+	2.文件读写，格式规范
+	IMPORTANT：dict的复制、初始化设置！！
+### 2017年5月20日19:42:57 zly
+	Changes
+	1.完成shell中的搜索模块
+	2.确定了dict不能复制，可以修改，可以默认初始化
+	TODOs
+	1.shell中的测试模块
+	2.文件读写，格式规范
