@@ -12,7 +12,8 @@ public:
 	LoadBasicDictStrategy(const LoadBasicDictStrategy &orig) = delete;
 	virtual ~LoadBasicDictStrategy();
 	//¼ÓÔØ´ÊµäÎÄ¼þ
-	virtual const BasicDict Load(const std::string &path) = 0;
+	//virtual const BasicDict Load(const std::string &path) = 0;
+	virtual bool Load(const std::string & path, BasicDict &dict) = 0;
 };
 
 

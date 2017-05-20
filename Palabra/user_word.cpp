@@ -7,7 +7,7 @@ bool operator<(const UserWord & a, const UserWord & b)
 	return a.word < b.word;
 }
 
-void operator<<(std::ostream & os, const UserWord & user_word)
+std::ostream &operator<<(std::ostream & os, const UserWord & user_word)
 {
 	if (!user_word.note.empty())
 		os << "  note:" << user_word.note[0] << "\n";
@@ -19,5 +19,6 @@ void operator<<(std::ostream & os, const UserWord & user_word)
 		for (const auto &i : user_word.tag)
 			os << i << "  ";
 		os << "\n";
-	}	
+	}
+	return os;
 }

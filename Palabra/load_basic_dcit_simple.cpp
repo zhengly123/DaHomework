@@ -9,11 +9,10 @@ LoadBasicDictSimple::~LoadBasicDictSimple()
 {
 }
 
-const BasicDict LoadBasicDictSimple::Load(const std::string & path)
+bool LoadBasicDictSimple::Load(const std::string & path, BasicDict &dict)
 {
 	std::string word_spelling, PoS, translation, sentence;
 	std::ifstream is(path);
-	std::set<BasicWord> dict;
 	Meaning meaning;
 	while (is)
 	{
@@ -24,7 +23,8 @@ const BasicDict LoadBasicDictSimple::Load(const std::string & path)
 		getline(is, meaning.sentence);
 		word.meaning.clear();
 		word.meaning.push_back(meaning);
-		dict.insert(word);
+		if (!word.empty())
+			dict.insert(word);
 	}
-	return BasicDict(std::move(dict));
+	return true;
 }

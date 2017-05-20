@@ -8,7 +8,8 @@ class LoadUserDictSimple :LoadUserDictStrategy
 public:
 	LoadUserDictSimple();
 	virtual ~LoadUserDictSimple();
-	virtual UserDict Load(const std::string &path) override;
+	//virtual UserDict Load(const std::string &path) override;
+	virtual bool Load(const std::string &path, UserDict & dict) override;
 	virtual bool Save(const std::string path, const UserDict& user_dict) override;
 };
 

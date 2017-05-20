@@ -9,7 +9,8 @@ class LoadBasicDictSimple :
 public:
 	LoadBasicDictSimple();
 	virtual ~LoadBasicDictSimple();
-	virtual const BasicDict Load(const std::string &path) override;
+	//virtual const BasicDict Load(const std::string &path) override;
+	bool Load(const std::string & path, BasicDict &dict) override;
 };
 
 
