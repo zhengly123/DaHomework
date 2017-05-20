@@ -60,6 +60,12 @@
     <ClCompile Include="operation_memorize.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="select_word_interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="select_word_bcz..cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sentence.h">
@@ -117,6 +123,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="operation_memorize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="select_word_interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="select_word_bcz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

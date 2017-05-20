@@ -1,6 +1,7 @@
 #include"shell_windows.h"
 #include"logger_simple.h"
 #include"operation_search.h"
+#include"operation_memorize.h"
 using namespace std;
 
 //所有操作的数组
@@ -22,6 +23,7 @@ void ShellWindows::Execute(const std::vector<std::string>&)
 	Login();//登录
 	Load(basic_dict_, user_dict_);//载入数据
 	AllOperation.push_back(new OperationSearch(basic_dict_, user_dict_));
+	AllOperation.push_back(new OperationMemorize(basic_dict_, user_dict_));
 
 	PrintHelp();
 	while (1)
@@ -104,6 +106,7 @@ void ShellWindows::Login()
 				cout << "----用户名或密码错误" << endl;
 
 		}
+
 		else if (input[0] == "2")
 		{
 			cout << "----请输入用户名" << endl;
@@ -117,6 +120,7 @@ void ShellWindows::Login()
 			}
 			else cout << "----注册失败" << endl;
 		}
+
 		else if (input[0] == "3")
 		{
 			mode = 2;

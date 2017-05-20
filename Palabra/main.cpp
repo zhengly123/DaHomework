@@ -8,6 +8,7 @@
 #include"load_user_dict_simple.h"
 #include"operation_search.h"
 #include"shell_windows.h"
+#include"select_word_bcz.h"
 using namespace std;
 
 void run()
@@ -19,7 +20,10 @@ void run()
 int main()
 {
 	run();
-
+	//BasicDict d1;
+	//UserDict d2;
+	//SelectWordBcz t(d1.ToWordList(), d2);
+	
 	//UserDict t;
 
 	//std::ofstream os("out.txt");
@@ -35,7 +39,7 @@ int main()
 	//Debug词典类
 	//LoadBasicDictSimple load;
 	//const BasicDict dict(load.Load("dict_txt_simple.txt"));
-	//auto list = dict.WordList();
+	//auto list = dict.ToWordList();
 	//for (auto i = dict.cbegin(); i != dict.cend(); ++i)
 	//	os << *i;
 	//cout<<dict.Search("father");

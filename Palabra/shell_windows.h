@@ -18,6 +18,8 @@ public:
 	virtual void Execute(const std::vector<std::string> &parameter = std::vector<std::string>()) override;
 private:
 	std::string username_;
+	BasicDict basic_dict_;
+	UserDict user_dict_;
 
 	void PrintWelcome() const;
 	// Êä³ö°ïÖúĞÅÏ¢
