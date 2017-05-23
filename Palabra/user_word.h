@@ -4,21 +4,17 @@
 #include<string>
 #include<vector>
 #include"sentence.h"
-//用户的单词类（存储用户关于单词的信息）
-//输入顺序为:
-//word
-//tag
-//note
-//review_num error_num last_appear_time importance（-1表示不再出现）
+//用户单词类（存储关于单词的用户数据）。
+//若为成员word==""，表示未找到单词。
 struct UserWord
 {
 	std::string word;
 	std::vector<std::string> note;
 	std::vector<std::string> tag;
-	int review_num;
-	int error_num;
-	int last_appear_time;
-	int importance;//[1,5]
+	int review_num;//复习次数
+	int error_num;//错误次数
+	int last_appear_time;//最后一次复习时间
+	int importance;//重要性[1,5]
 	friend bool operator<(const UserWord& a, const UserWord& b);
 	//重载流输出
 	friend std::ostream &operator<<(std::ostream &o, const UserWord &user_word);

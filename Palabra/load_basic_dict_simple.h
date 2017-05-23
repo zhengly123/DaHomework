@@ -2,7 +2,7 @@
 #ifndef LOAD_BASIC_DICT_SIMPLE_H
 #define LOAD_BASIC_DICT_SIMPLE_H
 #include "load_basic_dict_strategy.h"
-//加载基础词典文件，用于加载simple格式
+//加载基础词典文件，用于加载simple格式（测试时使用的最简单格式）
 class LoadBasicDictSimple :
 	public LoadBasicDictStrategy
 {

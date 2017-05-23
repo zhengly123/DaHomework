@@ -77,9 +77,6 @@
     <ClInclude Include="logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="word%28empty%29.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="user.h">
       <Filter>Header Files</Filter>
     </ClInclude>

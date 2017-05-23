@@ -2,7 +2,7 @@
 #include<string>
 #include<cstdlib>
 #include"user.h"
-//µÇÂ½¿ØÖÆ
+//µÇÂ½³éÏóÀà
 class Logger
 {
 public:

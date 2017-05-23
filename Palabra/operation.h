@@ -15,7 +15,7 @@
 #endif // _WIN32
 #include"user_dict.h"
 #include"basic_dict.h"
-
+//操作抽象类，是所有控制台操作的父类
 class Operation
 {
 public:

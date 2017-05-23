@@ -3,7 +3,7 @@
 #define OPERATION_SEARCH_H
 #include<queue>
 #include "operation.h"
-
+//ËÑË÷µ¥´ÊÀà
 class OperationSearch :
 	public Operation
 {

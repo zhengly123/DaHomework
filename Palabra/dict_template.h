@@ -4,8 +4,8 @@
 #include<set>
 #include<vector>
 
-using ListType = std::vector<std::string>;//单词表类型
-
+using ListType = std::vector<std::string>;//单词表类型，用于储存单词表，不带有多余数据
+//词典模板
 template<typename T> class DictTemplate
 {
 private:
@@ -14,10 +14,10 @@ public:
 	DictTemplate();
 	DictTemplate(std::set<T> & dict);
 	DictTemplate(std::set<T> && dict) noexcept;
-	//Copy is not allowed
+	//Copy is not allowed，因为词典过大，复制成本非常高
 	DictTemplate operator=(DictTemplate &&orig) noexcept = delete;
 	virtual ~DictTemplate();
-	void insert(const T &word);//dict插入，若已经存在，则会覆盖
+	void insert(const T &word);//插入新单词。若同名单词已经存在，则会覆盖。
 
 	const typename std::set<T>::const_iterator cbegin() const;
 	const typename std::set<T>::const_iterator cend() const;
@@ -27,6 +27,7 @@ public:
 	//导出单词列表
 	const ListType ToWordList() const;
 private:
+	//空对象，用于判断是不是返回了一个空值，即这个单词在词典中不存在。
 	const T EmptyObject;
 };
 
