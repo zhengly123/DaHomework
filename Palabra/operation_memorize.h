@@ -2,7 +2,7 @@
 #ifndef OPERATION_MEMORIZE_H
 #define OPERATION_MEMORIZE_H
 #include "operation.h"
-
+//±≥µ•¥ ¿‡
 class OperationMemorize :
 	public Operation
 {

@@ -3,7 +3,7 @@
 #define LOAD_USERDATA_STRATEGY_H
 #include<fstream>
 #include"user_dict.h"
-//加载用户文件
+//加载用户词典文件的抽象策略类
 class LoadUserDictStrategy
 {
 public:

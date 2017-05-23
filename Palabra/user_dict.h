@@ -4,6 +4,7 @@
 #include<string>
 #include"dict_template.h"
 #include"user_word.h"
+//用户词典类，保存关于单词的用户数据
 using UserDict = DictTemplate<UserWord>;
 //class UserDict : public DictTemplate<UserWord>
 //{

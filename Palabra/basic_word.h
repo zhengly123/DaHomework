@@ -5,7 +5,8 @@
 #include<vector>
 #include<iostream>
 #include"meaning.h"
-//字典中的单词类（存储字典中的信息)。若为空，表示不存在。
+//基础单词类（存储字典中的信息)。
+//若为成员word==""，表示未找到单词。
 struct BasicWord
 {
 	//英文单词

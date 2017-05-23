@@ -179,7 +179,6 @@
     <ClInclude Include="shell_windows.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="user_dict.h" />
-    <ClInclude Include="word%28empty%29.h" />
     <ClInclude Include="basic_word.h" />
     <ClInclude Include="user_word.h" />
   </ItemGroup>

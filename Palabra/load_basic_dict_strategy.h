@@ -3,7 +3,7 @@
 #define LOAD_BASIC_DICT_STRATEGY_H
 #include <fstream>
 #include"basic_dict.h"
-//加载词典文件
+//加载基础词典文件的抽象策略类
 class LoadBasicDictStrategy
 {
 public:
@@ -11,8 +11,9 @@ public:
 	//禁止复制
 	LoadBasicDictStrategy(const LoadBasicDictStrategy &orig) = delete;
 	virtual ~LoadBasicDictStrategy();
-	//加载词典文件
+	
 	//virtual const BasicDict Load(const std::string &path) = 0;
+	//加载词典文件
 	virtual bool Load(const std::string & path, BasicDict &dict) = 0;
 };
 

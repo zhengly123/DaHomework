@@ -17,7 +17,7 @@ public:
 	}
 };
 
-//按照百词斩(bcz)的模式
+//按照百词斩(bcz)的模式选取单词
 class SelectWordBcz :
 	public SelectWordInterface
 {

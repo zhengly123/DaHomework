@@ -5,6 +5,7 @@
 #include<vector>
 #include"user_dict.h"
 using ListType = std::vector<std::string>;
+//选取单词的抽象类
 class SelectWordInterface
 {
 public:
