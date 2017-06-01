@@ -9,6 +9,7 @@
 #include"operation_search.h"
 #include"shell_windows.h"
 #include"select_word_bcz.h"
+#include"load_basic_dict_json.h"
 using namespace std;
 
 void run()
@@ -19,7 +20,7 @@ void run()
 
 int main()
 {
-	run();
+	//run();
 	//BasicDict d1;
 	//UserDict d2;
 	//SelectWordBcz t(d1.ToWordList(), d2);
@@ -68,4 +69,9 @@ int main()
 	//load.Load("userdata_zly.txt", a);
 	//puts("-=-=-=-=-=-=-");
 	//cout << *(a.cbegin());
+
+	//Debug LoadBasicDictJson
+	LoadBasicDictJson lbdj;
+	BasicDict dict;
+	lbdj.Load("dict.json", dict);
 }

@@ -66,6 +66,12 @@
     <ClCompile Include="select_word_bcz..cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="jsoncpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="load_basic_dict_json.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sentence.h">
@@ -128,6 +134,12 @@
     <ClInclude Include="select_word_bcz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="load_basic_dict_json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="out.txt">
@@ -150,7 +162,8 @@
     <None Include="makefile">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="ClassDiagram.cd" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="dict.json">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

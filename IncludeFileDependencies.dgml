@@ -55,8 +55,8 @@
     <Node Id="@193" Category="CodeSchema_ProjectItem" Bounds="1091.51099589245,836.467981525374,173.011333410412,25.998000077079" FilePath="$(VsSolution)\Palabra\load_user_dict_strategy.h" Label="load_user_dict_strategy.h" />
     <Node Id="@195" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\8.1\Include\shared\winapifamily.h" Label="winapifamily.h" />
     <Node Id="@197" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.10240.0\ucrt\corecrt_memory.h" Label="corecrt_memory.h" />
-    <Node Id="@199" Category="CodeSchema_ProjectItem" Bounds="1115.87098531302,628.473504592826,135.478000077079,25.998000077079" FilePath="$(VsSolution)\Palabra\select_word_bcz.h" Label="select_word_bcz.h" UseManualLocation="True" />
-    <Node Id="@2" Category="CodeSchema_PoundIncludeFile" Bounds="589.9397654237,525.296606846226,714.582563879163,555.607432519899" FilePath="$(VsSolution)\Palabra\Palabra.vcxproj" Group="Expanded" Label="Palabra.vcxproj" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" LayoutSettings="TopToBottom" UseManualLocation="True" />
+    <Node Id="@199" Category="CodeSchema_ProjectItem" Bounds="1115.87098531302,628.473504592827,135.478000077079,25.998000077079" FilePath="$(VsSolution)\Palabra\select_word_bcz.h" Label="select_word_bcz.h" UseManualLocation="True" />
+    <Node Id="@2" Category="CodeSchema_PoundIncludeFile" Bounds="589.940120214671,525.296608673178,714.582209088191,555.606317378749" FilePath="$(VsSolution)\Palabra\Palabra.vcxproj" Group="Expanded" Label="Palabra.vcxproj" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" LayoutSettings="TopToBottom" UseManualLocation="True" />
     <Node Id="@201" Category="CodeSchema_ProjectItem" FilePath="$(VsInstallDir)\VC\include\cmath" Label="cmath" />
     <Node Id="@203" Category="CodeSchema_ProjectItem" FilePath="$(VsInstallDir)\VC\include\istream" Label="istream" />
     <Node Id="@205" Category="CodeSchema_ProjectItem" FilePath="$(VsInstallDir)\VC\include\ostream" Label="ostream" />
@@ -134,9 +134,9 @@
     <Node Id="基础词典" Bounds="609.9397654237,741.844003086194,217.381333410412,253.992523807548" Group="Expanded" UseManualLocation="True" />
     <Node Id="控制台逻辑控制" Category="Comment" Bounds="892.573608398438,410.210717611973,104,25.96" UseManualLocation="True" />
     <Node Id="操作" Bounds="682.599868776565,565.296708673178,371.174788814058,141.996300154158" Group="Expanded" Label="几种操作" UseManualLocation="True" />
-    <Node Id="用户词典" Bounds="877.510620117187,740.469773615217,407.011709185675,258.142621669399" Group="Expanded" UseManualLocation="True" />
+    <Node Id="用户词典" Bounds="877.510620117187,740.469773615218,407.011709185675,258.142621669399" Group="Expanded" UseManualLocation="True" />
     <Node Id="策略的一种实现" Category="Comment" Bounds="944.928253173828,783.497235470163,104,25.96" UseManualLocation="True" />
-    <Node Id="读写文件加载词典的策略类" Category="Comment" Bounds="897.510620117187,840.65598791157,164,25.9599999999999" Label="读写文件加载词典的策略类" UseManualLocation="True" />
+    <Node Id="读写文件加载词典的策略类" Category="Comment" Bounds="897.510620117187,840.65598791157,164,25.96" Label="读写文件加载词典的策略类" UseManualLocation="True" />
     <Node Id="选择单词的逻辑" Category="Comment" Bounds="1125.72277832031,572.513404592826,104,25.96" UseManualLocation="True" />
   </Nodes>
   <Links>
@@ -240,11 +240,11 @@
     <Link Source="@189" Target="@147" Category="PoundInclude" />
     <Link Source="@19" Target="@13" Category="PoundInclude" />
     <Link Source="@191" Target="@177" Category="PoundInclude" Bounds="718.630432128906,863.780517578125,0,21" />
-    <Link Source="@193" Target="@179" Category="PoundInclude" Bounds="1174.79105690903,862.465981602453,1.99380261393185,21.0402464385252" />
+    <Link Source="@193" Target="@179" Category="PoundInclude" Bounds="1174.79105690903,862.465981602453,1.99380261393162,21.0402464385252" />
     <Link Source="@197" Target="@169" Category="PoundInclude" />
     <Link Source="@197" Target="@183" Category="PoundInclude" />
     <Link Source="@197" Target="@81" Category="PoundInclude" />
-    <Link Source="@199" Target="@43" Category="PoundInclude" Bounds="1179.45414820709,654.471504669905,2.57001337583233,21.066403866577" />
+    <Link Source="@199" Target="@43" Category="PoundInclude" Bounds="1179.45414820709,654.471504669906,2.57001337583233,21.0664038665768" />
     <Link Source="@2" Target="@199" Category="Contains" />
     <Link Source="@2" Target="@43" Category="Contains" />
     <Link Source="@2" Target="@45" Category="Contains" />
@@ -342,7 +342,7 @@
     <Link Source="@5" Target="@27" Category="PoundInclude" />
     <Link Source="@5" Target="@33" Category="PoundInclude" />
     <Link Source="@5" Target="@7" Category="PoundInclude" />
-    <Link Source="@51" Target="@193" Category="PoundInclude" Bounds="1173.94200815282,806.467873692297,1.99380261393185,21.0402464385255" />
+    <Link Source="@51" Target="@193" Category="PoundInclude" Bounds="1173.94200815282,806.467873692297,1.99380261393162,21.0402464385253" />
     <Link Source="@53" Target="@103" Category="PoundInclude" />
     <Link Source="@53" Target="@155" Category="PoundInclude" />
     <Link Source="@55" Target="@183" Category="PoundInclude" />
@@ -351,14 +351,14 @@
     <Link Source="@59" Target="@57" Category="PoundInclude" />
     <Link Source="@61" Target="@63" Category="PoundInclude" />
     <Link Source="@65" Target="@183" Category="PoundInclude" />
-    <Link Source="@67" Target="@129" Category="PoundInclude" Bounds="804.676029929901,631.294806923305,43.676557327106,25.4667603941216" />
+    <Link Source="@67" Target="@129" Category="PoundInclude" Bounds="804.676033048386,631.294808750257,43.6765508142001,25.4667530342831" />
     <Link Source="@69" Target="@183" Category="PoundInclude" />
     <Link Source="@7" Target="@159" Category="PoundInclude" />
     <Link Source="@7" Target="@31" Category="PoundInclude" />
     <Link Source="@71" Target="@183" Category="PoundInclude" />
     <Link Source="@71" Target="@83" Category="PoundInclude" />
     <Link Source="@73" Target="@183" Category="PoundInclude" />
-    <Link Source="@75" Target="@45" Category="PoundInclude" Bounds="847.208748980597,1041.0448065923,92.3437334394498,4.22087625571612" />
+    <Link Source="@75" Target="@45" Category="PoundInclude" Bounds="847.208748980597,1041.044535408,92.3437311385734,4.22035800809431" />
     <Link Source="@77" Target="@183" Category="PoundInclude" />
     <Link Source="@77" Target="@81" Category="PoundInclude" />
     <Link Source="@79" Target="@183" Category="PoundInclude" />
@@ -367,7 +367,7 @@
     <Link Source="@79" Target="@81" Category="PoundInclude" />
     <Link Source="@81" Target="@53" Category="PoundInclude" />
     <Link Source="@83" Target="@185" Category="PoundInclude" />
-    <Link Source="@85" Target="@129" Category="PoundInclude" Bounds="905.658120972155,631.294806923305,38.001957957473,25.0472218407211" />
+    <Link Source="@85" Target="@129" Category="PoundInclude" Bounds="905.658124049267,631.294808750257,38.0019521215903,25.047214490638" />
     <Link Source="@87" Target="@183" Category="PoundInclude" />
     <Link Source="@87" Target="@69" Category="PoundInclude" />
     <Link Source="@89" Target="@65" Category="PoundInclude" />
@@ -489,7 +489,7 @@
     <Link Source="PoundIncludeGraphExternalsGroup" Target="G2" Category="Contains" />
     <Link Source="PoundIncludeGraphExternalsGroup" Target="G4" Category="Contains" />
     <Link Source="PoundIncludeGraphExternalsGroup" Target="OthersGroup" Category="Contains" />
-    <Link Source="两中词条" Target="@41" Bounds="1095.51141021836,963.845092410718,21.0067830543694,0.816040169593407" />
+    <Link Source="两中词条" Target="@41" Bounds="1095.51141021836,963.845092410718,21.0067830543694,0.81604016959318" />
     <Link Source="两种词典" Target="@179" Bounds="1059.2497253418,907.200599373516,55.8222234502407,1.68082845751167" />
     <Link Source="基础词典" Target="@177" Category="Contains" />
     <Link Source="基础词典" Target="@191" Category="Contains" />
@@ -507,9 +507,9 @@
     <Link Source="用户词典" Target="两种词典" Category="Contains" />
     <Link Source="用户词典" Target="策略的一种实现" Category="Contains" />
     <Link Source="用户词典" Target="读写文件加载词典的策略类" Category="Contains" />
-    <Link Source="策略的一种实现" Target="@51" Bounds="1048.92825317383,795.034181343663,32.3192696026197,0.553117402289331" />
-    <Link Source="读写文件加载词典的策略类" Target="@193" Bounds="1061.51062011719,851.472741457129,21.0023599801923,0.441089706787125" />
-    <Link Source="选择单词的逻辑" Target="@199" Bounds="1179.0878582736,598.473404592826,2.21372873137852,21.0494622414734" />
+    <Link Source="策略的一种实现" Target="@51" Bounds="1048.92825317383,795.034181343663,32.3192696026197,0.553117402289445" />
+    <Link Source="读写文件加载词典的策略类" Target="@193" Bounds="1061.51062011719,851.472741457129,21.0023599801921,0.441089706787125" />
+    <Link Source="选择单词的逻辑" Target="@199" Bounds="1179.0878582736,598.473404592826,2.21372873137852,21.0494622414733" />
   </Links>
   <Categories>
     <Category Id="CodeSchema_PoundIncludeFile" Label="C++ Project File" BasedOn="File" Background="#FFEFEFEF" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="C++ Project File" />
