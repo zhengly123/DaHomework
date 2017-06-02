@@ -1,8 +1,9 @@
 #pragma once
 #include<queue>
 #include<set>
-#include "select_word_interface.h"
+#include"select_word_interface.h"
 #include"user_dict.h"
+#include"user_info.h"
 //priority_queue比较器
 class Compare
 {
@@ -22,16 +23,13 @@ class SelectWordBcz :
 	public SelectWordInterface
 {
 public:
-	SelectWordBcz(const ListType &list, UserDict &dict);
+	using SelectWordInterface::SelectWordInterface;
 	virtual ~SelectWordBcz();
 	// 选择模式
-	void SetMode(int mode);
 	virtual UserWord Select() override;
-	void Update(const UserWord &word);//word的tag等更新应该由外部操作来完成
+	virtual void Update(const UserWord word) override;//word的tag等更新应该由外部操作来完成
+
 private:
 	std::priority_queue<UserWord, std::vector<UserWord>, Compare> heap;
-	//0为混合，1为新学习，2为复习
-	int mode_;
 	//UserWord last_word_;
-	ListType::const_iterator next_word_;
 };

@@ -15,7 +15,7 @@ struct UserWord
 	int review_num;//复习次数
 	int error_num;//错误次数
 	int last_time;//最后一次复习时间
-	int importance;//重要性[1,5]
+	int importance;//重要性:0未背过，1待复习，-1已记住
 
 	friend bool operator<(const UserWord& a, const UserWord& b);
 	//重载流输出

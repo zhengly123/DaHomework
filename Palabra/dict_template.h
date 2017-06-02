@@ -23,7 +23,7 @@ public:
 	const typename std::set<T>::const_iterator cend() const;
 	void clear();
 	//查找单词
-	const T& Search(const std::string& word) const;
+	const T Search(const std::string& word) const;
 	//导出单词列表
 	const ListType ToWordList() const;
 private:
@@ -60,13 +60,15 @@ DictTemplate<T>::~DictTemplate()
 }
 
 template<typename T>
-const T& DictTemplate<T>::Search(const std::string & word) const
+const T DictTemplate<T>::Search(const std::string & word) const
 {
-	T temp;
+	T temp = {};
 	temp.word = word;
 	auto it = dict_.find(temp);
 	if (it == dict_.cend())
-		return EmptyObject;//如果未找到返回空
+	{
+		return temp;//如果未找到返回空
+	}
 	else return *it;
 }
 

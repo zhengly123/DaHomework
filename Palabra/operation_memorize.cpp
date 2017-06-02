@@ -18,9 +18,9 @@ void OperationMemorize::Execute(const std::vector<std::string>&)
 {
 	PrintHelp();
 	//TODO:实现背单词功能 选单词 输出
-	SelectWordBcz select(basic_dict_.ToWordList(), user_dict_);
-	auto t = select.Select();
-	cout << t << endl;
+	//SelectWordBcz select(basic_dict_.ToWordList(), user_dict_);
+	//auto t = select.Select();
+	//cout << t << endl;
 }
 
 void OperationMemorize::PrintHelp() const
