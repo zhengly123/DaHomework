@@ -4,10 +4,10 @@
 //#include"logger_simple.h"
 #include"user_dict.h"
 #include"user_word.h"
-#include"shell_windows.h"
+//#include"shell_windows.h"
 #include"load_user_dict_simple.h"
 #include"operation_search.h"
-#include"shell_windows.h"
+//#include"shell_windows.h"
 #include"select_word_bcz.h"
 #include"load_basic_dict_json.h"
 #include"load_user_dict_json.h"
@@ -15,8 +15,8 @@ using namespace std;
 
 void run()
 {
-	ShellWindows shell;
-	shell.Execute();
+	//ShellWindows shell;
+	//shell.Execute();
 }
 
 int main()
@@ -76,25 +76,34 @@ int main()
 	//BasicDict dict;
 	//lbdj.Load("dict.json", dict);
 
-	//Debug LoadUserDictJson
-	LoadUserDictJson load;
-	UserDict dict, dict2 = {};
-	UserWord word = {};
-	UserInfo info = {}, info2 = {};
-	Date date = {};
-	word.word = "father";
-	word.last_time = int(time(NULL));
-	word.note = "It's my favortie word!";
-	dict.insert(word);
-	dict.insert(word);
-	date.day = 1;
-	date.month = 6;
-	date.year = 2016;
-	info.level = "CET6";
-	info.history.push_back(make_pair(date, 999));
-	info.history.push_back(make_pair(date, 999));
-	info.history.push_back(make_pair(date, 999));
-	load.Save("data_zly.json",dict,info);
-	load.Load("data_zly.json", dict2, info2);
-	load.Save("data_zly1.json", dict2, info2);
+	////Debug LoadUserDictJson
+	//LoadUserDictJson load;
+	//UserDict dict, dict2 = {};
+	//UserWord word = {};
+	//UserInfo info = {}, info2 = {};
+	//Date date = {};
+	//word.word = "father";
+	//word.last_time = int(time(NULL));
+	//word.note = "It's my favortie word!";
+	//dict.insert(word);
+	//dict.insert(word);
+	//date.day = 1;
+	//date.month = 6;
+	//date.year = 2016;
+	//info.level = "CET6";
+	//info.history.push_back(make_pair(date, 999));
+	//info.history.push_back(make_pair(date, 999));
+	//info.history.push_back(make_pair(date, 999));
+	//load.Save("data_zly.json",dict,info);
+	//load.Load("data_zly.json", dict2, info2);
+	//load.Save("data_zly1.json", dict2, info2);
+
+	//Debug SelectWordBcz
+	LoadBasicDictJson lbdj;
+	BasicDict dict;
+	UserDict udict;
+	lbdj.Load("dict.json", dict);
+	SelectWordBcz sel(dict.ToWordList(), ListType(), dict, udict);
+	auto t = sel.Select();
+	cout << t;
 }

@@ -160,7 +160,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="operation.cpp" />
     <ClCompile Include="operation_search.cpp" />
-    <ClCompile Include="shell_windows.cpp" />
     <ClCompile Include="user.cpp" />
     <ClCompile Include="basic_word.cpp" />
     <ClCompile Include="user_word.cpp" />

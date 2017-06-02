@@ -1,30 +1,48 @@
 #include "select_word_bcz.h"
 #include<ctime>
 #include<exception>
-SelectWordBcz::SelectWordBcz(const ListType & list, UserDict & dict)
-	: SelectWordInterface(list, dict), mode_(0)
-{
-	next_word_ = list_.cbegin();
-}
 
 SelectWordBcz::~SelectWordBcz()
 {
-	while (!heap.empty())
-	{
-		auto temp = heap.top();
-		heap.pop();
-		dict_.insert(temp);
-	}
+
 }
 
 
 // 选择模式
-void SelectWordBcz::SetMode(int mode)
-{
-	mode_ = mode;
-}
+
 
 UserWord SelectWordBcz::Select()
+{
+	if (!updated)
+		throw logic_error("UserDict have not been updated!");
+	UserWord word;
+	if (mode_ == 1 && next_word_ == new_word_list_.cend())
+		throw exception("No more new word!");
+	if (mode_ == 2 && heap.empty())
+		throw exception("No more old word!");
+	bool old = 0;
+	if (mode_ != 0) old = (mode_ == 2);
+	else
+	{
+		if (next_word_ == new_word_list_.cend()) old = 1;
+		else if (heap.empty()) old = 0;
+		else old = rand() & 1;
+	}
+	if (old)
+	{
+		word = heap.top();
+		heap.pop();
+	}
+	else
+	{
+		word = user_dict_->Search(*next_word_);
+		next_word_++;
+	}
+	updated = 0;
+	return word;
+}
+
+/*UserWord SelectWordBcz::Select()
 {
 	UserWord word = {};
 	bool old_word;//是否选择复习
@@ -59,21 +77,14 @@ UserWord SelectWordBcz::Select()
 		else throw std::out_of_range("No more new word.");
 	}
 	return word;
-}
+}*/
 
-void SelectWordBcz::Update(const UserWord &word)
+void SelectWordBcz::Update(const UserWord word)
 {
-	/*if (last_word_.word == "")
-	{
-		throw std::logic_error("No word could be updated");
-	}
-	last_word_.review_num++;
-	last_word_.last_time = time(0);	
-	if (!accurate) last_word_.error_num++;
-	if (last_word_.review_num >= 3
-		&& (double(last_word_.error_num) / last_word_.review_num < 0.65))
-		last_word_.importance = -1;*/
-	heap.push(word);
+	if (word.importance==1)
+		heap.push(word);
+	user_dict_->insert(word);
+	updated = true;
 	//dict_.insert(last_word_);//析构时更新
 	//memset(&last_word_, 0, sizeof(last_word_));
 }

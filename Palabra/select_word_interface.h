@@ -4,18 +4,28 @@
 #include<string>
 #include<vector>
 #include"user_dict.h"
+#include"basic_dict.h"
 using ListType = std::vector<std::string>;
 //选取单词的抽象类
 class SelectWordInterface
 {
 public:
-	SelectWordInterface(const ListType &list,UserDict &dict);
+	//mode 0为混合，1为新学习，2为复习
+	//Warning:词典类不要使用右值
+	SelectWordInterface(const ListType new_word_list,
+		const ListType old_word_list, const BasicDict &basic_dict
+		, UserDict &user_dict, const int mode = 0);
 	virtual ~SelectWordInterface();
 	// 给出下一个单词
 	virtual UserWord Select() = 0;
+	virtual void Update(const UserWord word) = 0;
 protected:
-	const ListType list_;//不应使用&，因为ToWordList是右值
-	UserDict &dict_;
+	const ListType new_word_list_, old_word_list_;//不应使用&，因为ToWordList是右值
+	const BasicDict *const basic_dict_;
+	UserDict *user_dict_;
+	bool updated;//UserData是否更新
+	ListType::const_iterator next_word_;
+	int mode_;//0为混合，1为新学习，2为复习
 };
 
 #endif  // !SELECT_WORD_INTERFACE_H

@@ -27,9 +27,6 @@
     <ClCompile Include="logger_simple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="shell_windows.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="operation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
