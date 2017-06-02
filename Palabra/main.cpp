@@ -11,6 +11,7 @@
 #include"select_word_bcz.h"
 #include"load_basic_dict_json.h"
 #include"load_user_dict_json.h"
+#include"logger_json.h"
 using namespace std;
 
 void run()
@@ -98,12 +99,22 @@ int main()
 	//load.Load("data_zly.json", dict2, info2);
 	//load.Save("data_zly1.json", dict2, info2);
 
-	//Debug SelectWordBcz
-	LoadBasicDictJson lbdj;
-	BasicDict dict;
-	UserDict udict;
-	lbdj.Load("dict.json", dict);
-	SelectWordBcz sel(dict.ToWordList(), ListType(), dict, udict);
-	auto t = sel.Select();
-	cout << t;
+	////Debug SelectWordBcz
+	//LoadBasicDictJson lbdj;
+	//BasicDict dict;
+	//UserDict udict;
+	//lbdj.Load("dict.json", dict);
+	//SelectWordBcz sel(dict.ToWordList(), ListType(), dict, udict);
+	//auto t = sel.Select();
+	//cout << t;
+	//auto list = dict.ToWordList();
+	//auto tt = GetThreeWord(list, t.word);
+
+	////Debug logger_json
+	//LoggerJson lj("userlist.json"),llj("userlist.json");
+	//User a;
+	//a.username_ = "zhengly123";
+	//a.password_ = "111111";
+	//lj.Load();
+	//auto t = lj.Signup(a);
 }

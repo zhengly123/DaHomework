@@ -27,6 +27,8 @@ protected:
 	ListType::const_iterator next_word_;
 	int mode_;//0为混合，1为新学习，2为复习
 };
+//得到三个单词不同于word的单词，用于测试
+std::vector<std::string> GetThreeWord(const ListType &list, const std::string word);
 
 #endif  // !SELECT_WORD_INTERFACE_H
 

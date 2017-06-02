@@ -1,10 +1,6 @@
 #include<fstream>
 #include "logger_simple.h"
 const std::string user_path = "user_simple.ini";
-LoggerSimple::LoggerSimple()
-{
-}
-
 
 LoggerSimple::~LoggerSimple()
 {
@@ -13,7 +9,7 @@ LoggerSimple::~LoggerSimple()
 bool LoggerSimple::Login(const User &user)
 {
 	load_user_list();
-	for (auto i : user_list_)
+	for (const auto &i : user_list_)
 		if (i == user)
 			return true;
 	return false;
