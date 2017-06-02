@@ -13,3 +13,25 @@ SelectWordInterface::~SelectWordInterface()
 {
 }
 
+std::vector<std::string> GetThreeWord(const ListType & list, const std::string word)
+{
+	std::vector<std::string> ret;
+	for (int i = 0; i < 3; )
+	{
+		auto t = list[rand() % list.size()];
+		bool flag = false;
+
+		if (t == word) continue;
+		for (const auto &j : ret)
+			if (j == t)
+			{
+				flag = true;
+				break;
+			}
+		if (flag) continue;
+		++i;
+		ret.push_back(t);
+	}
+	return ret;
+}
+
