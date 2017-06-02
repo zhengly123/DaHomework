@@ -4,6 +4,7 @@
 #include<fstream>
 #include"load_user_dict_strategy.h"
 const std::string JLevel = "lev";
+const std::string JDailyNumberOfWord = "num";
 const std::string JHistory = "history";
 	const std::string JYear = "year";
 	const std::string JMonth = "mon";
