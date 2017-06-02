@@ -12,7 +12,7 @@ public:
 		if (lhs.importance >= 0 && rhs.importance == -1) return true;
 		else if ((lhs.importance == rhs.importance
 			|| (lhs.importance >= 0 && rhs.importance >= 0)))
-			if (lhs.last_appear_time < rhs.last_appear_time) return true;
+			if (lhs.last_time < rhs.last_time) return true;
 		return false;
 	}
 };

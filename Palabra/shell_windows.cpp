@@ -136,17 +136,17 @@ void ShellWindows::Login()
 void ShellWindows::Load(BasicDict &basic_dict, UserDict &user_dict)
 {
 	LoadBasicDictSimple load_basic_dict_simple;
-	LoadUserDictSimple load_user_dict_simple;
+	//LoadUserDictSimple load_user_dict_simple;
 	bool basic_dict_status = load_basic_dict_simple.Load("dict_txt_simple.txt", basic_dict);
-	bool user_dict_status = load_user_dict_simple.Load("userdata_" + username_ + ".txt", user_dict);
+	//bool user_dict_status = load_user_dict_simple.Load("userdata_" + username_ + ".txt", user_dict);
 	//TODO:exception handle
-	basic_dict_status = user_dict_status = 0;//avoid the warning.
+	//basic_dict_status = user_dict_status = 0;//avoid the warning.
 }
 
 void ShellWindows::Save(UserDict & user_dict)
 {
-	LoadUserDictSimple load_user_dict_simple;
-	load_user_dict_simple.Save("userdata_" + username_ + ".txt", user_dict);
+	//LoadUserDictSimple load_user_dict_simple;
+	//load_user_dict_simple.Save("userdata_" + username_ + ".txt", user_dict);
 }
 
 void ShellWindows::PrintWelcome() const

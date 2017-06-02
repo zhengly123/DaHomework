@@ -13,12 +13,12 @@ std::ostream &operator<<(std::ostream & os, const UserWord & user_word)
 		os << "  note:" << user_word.note[0] << "\n";
 	//if (!user_word.sentence.empty())
 	//	os << "  User sentence:" << user_word.sentence[0].english << "\n";
-	if (!user_word.tag.empty())
-	{
-		os << "  tag:";
-		for (const auto &i : user_word.tag)
-			os << i << "  ";
-		os << "\n";
-	}
+	//if (!user_word.tag.empty())
+	//{
+	//	os << "  tag:";
+	//	for (const auto &i : user_word.tag)
+	//		os << i << "  ";
+	//	os << "\n";
+	//}
 	return os;
 }

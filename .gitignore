@@ -252,3 +252,5 @@ paket-files/
 *.sln.iml
 Palabra/out.txt
 CodeMap1.dgml
+Palabra/data_zly.json
+Palabra/data_zly1.json

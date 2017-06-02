@@ -8,15 +8,16 @@
 //word
 //tag
 //note
-//review_num error_num last_appear_time importance（-1表示不再出现）
-class LoadUserDictSimple :LoadUserDictStrategy
-{
-public:
-	LoadUserDictSimple();
-	virtual ~LoadUserDictSimple();
-	//virtual UserDict Load(const std::string &path) override;
-	virtual bool Load(const std::string &path, UserDict & dict) override;
-	virtual bool Save(const std::string path, const UserDict& user_dict) override;
-};
+//review_num error_num last_time importance（-1表示不再出现）
+//class LoadUserDictSimple :LoadUserDictStrategy
+//{
+//public:
+//	LoadUserDictSimple();
+//	virtual ~LoadUserDictSimple();
+//	//virtual UserDict Load(const std::string &path) override;
+//	//修改基类接口，本函数弃用
+//	//virtual bool Load(const std::string &path, UserDict & dict) override;
+//	//virtual bool Save(const std::string path, const UserDict& user_dict) override;
+//};
 
 #endif  // !LOAD_USERDATA_SIMPLE_H
