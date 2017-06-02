@@ -9,12 +9,14 @@
 struct UserWord
 {
 	std::string word;
-	std::vector<std::string> note;
-	std::vector<std::string> tag;
+	std::string note;
+	//std::vector<std::string> tag;
+	bool favor;
 	int review_num;//复习次数
 	int error_num;//错误次数
-	int last_appear_time;//最后一次复习时间
+	int last_time;//最后一次复习时间
 	int importance;//重要性[1,5]
+
 	friend bool operator<(const UserWord& a, const UserWord& b);
 	//重载流输出
 	friend std::ostream &operator<<(std::ostream &o, const UserWord &user_word);

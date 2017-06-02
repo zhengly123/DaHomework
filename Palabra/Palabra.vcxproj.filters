@@ -72,6 +72,9 @@
     <ClCompile Include="load_basic_dict_json.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="load_user_dict_json.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sentence.h">
@@ -137,7 +140,13 @@
     <ClInclude Include="load_basic_dict_json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="user_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="json\json.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="load_user_dict_json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

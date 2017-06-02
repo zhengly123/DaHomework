@@ -68,7 +68,7 @@ void SelectWordBcz::Update(const UserWord &word)
 		throw std::logic_error("No word could be updated");
 	}
 	last_word_.review_num++;
-	last_word_.last_appear_time = time(0);	
+	last_word_.last_time = time(0);	
 	if (!accurate) last_word_.error_num++;
 	if (last_word_.review_num >= 3
 		&& (double(last_word_.error_num) / last_word_.review_num < 0.65))
@@ -82,7 +82,7 @@ void SelectWordBcz::Update(const UserWord &word)
 //{
 //	memset(&last_word_, 0, sizeof(last_word_));
 //	last_word_.word = word;
-//	last_word_.last_appear_time = time();
+//	last_word_.last_time = time();
 //	last_word_.review_num = 1;
 //	last_word_.
 //}

@@ -145,6 +145,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="jsoncpp.cpp" />
+    <ClCompile Include="load_user_dict_json.cpp" />
     <ClCompile Include="operation_memorize.cpp" />
     <ClCompile Include="select_word_bcz..cpp" />
     <ClCompile Include="select_word_interface.cpp" />
@@ -167,6 +168,7 @@
   <ItemGroup>
     <ClInclude Include="basic_dict.h" />
     <ClInclude Include="dict_template.h" />
+    <ClInclude Include="load_user_dict_json.h" />
     <ClInclude Include="json\json.h" />
     <ClInclude Include="load_basic_dict_json.h" />
     <ClInclude Include="load_basic_dict_simple.h" />
@@ -186,6 +188,7 @@
     <ClInclude Include="user.h" />
     <ClInclude Include="user_dict.h" />
     <ClInclude Include="basic_word.h" />
+    <ClInclude Include="user_info.h" />
     <ClInclude Include="user_word.h" />
   </ItemGroup>
   <ItemGroup>
