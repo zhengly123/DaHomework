@@ -18,6 +18,7 @@ bool LoadUserDictJson::Load(const std::string & path, UserDict & dict, UserInfo 
 	UserWord word = {};
 	is >> root;
 	info.level = root[JLevel].asString();
+	info.daily_number_of_word = root[JDailyNumberOfWord].asInt();
 	for (const auto &record : root[JHistory])
 	{
 		date.year = record[JYear].asInt();
@@ -46,6 +47,7 @@ bool LoadUserDictJson::Save(const std::string path, const UserDict & user_dict, 
 	Json::FastWriter fast_writer;
 	ofstream os(path);
 	root[JLevel] = info.level;
+	root[JDailyNumberOfWord] = info.daily_number_of_word;
 	for (const auto &i : info.history)
 	{
 		record[JYear] = i.first.year;
