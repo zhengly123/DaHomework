@@ -22,10 +22,11 @@ public:
 	const typename std::set<T>::const_iterator cbegin() const;
 	const typename std::set<T>::const_iterator cend() const;
 	void clear();
-	//查找单词
+	//查找单词（如果未找到返回只包含word的空词）
 	const T Search(const std::string& word) const;
 	//导出单词列表
 	const ListType ToWordList() const;
+	const ListType ToWordList(std::string tag) const;
 private:
 	//空对象，用于判断是不是返回了一个空值，即这个单词在词典中不存在。
 	const T EmptyObject;
@@ -67,7 +68,7 @@ const T DictTemplate<T>::Search(const std::string & word) const
 	auto it = dict_.find(temp);
 	if (it == dict_.cend())
 	{
-		return temp;//如果未找到返回空
+		return temp;//如果未找到返回只包含word信息的空词
 	}
 	else return *it;
 }
@@ -78,6 +79,18 @@ const ListType DictTemplate<T>::ToWordList() const
 	std::vector<std::string> wordlist;
 	for (auto i : dict_)
 		wordlist.push_back(i.word);
+	return wordlist;
+}
+
+template<typename T>
+inline const ListType DictTemplate<T>::ToWordList(std::string tag) const
+{
+	std::vector<std::string> wordlist;
+	for (const auto &i : dict_)
+	{
+		if (find(i.tag.cbegin(), i.tag.cend(), tag) != i.tag.cend())
+			wordlist.push_back(i.word);
+	}
 	return wordlist;
 }
 

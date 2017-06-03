@@ -5,6 +5,7 @@
 Logger::Logger(std::string path)
 	:path_(path)
 {
+	Load();
 }
 
 

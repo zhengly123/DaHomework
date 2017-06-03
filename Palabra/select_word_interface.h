@@ -18,7 +18,10 @@ public:
 	virtual ~SelectWordInterface();
 	// 给出下一个单词
 	virtual UserWord Select() = 0;
-	virtual void Update(const UserWord word) = 0;
+	virtual void Update(UserWord word) = 0;
+	virtual int NumberOfRestNewWord() = 0;
+	virtual int NumberOfRestOldWord() = 0;
+	virtual bool Empty() = 0;
 protected:
 	const ListType new_word_list_, old_word_list_;//不应使用&，因为ToWordList是右值
 	const BasicDict *const basic_dict_;
@@ -29,6 +32,7 @@ protected:
 };
 //得到三个单词不同于word的单词，用于测试
 std::vector<std::string> GetThreeWord(const ListType &list, const std::string word);
-
+ListType GetOldWordList(const UserDict &dict);
+ListType GetNewWordList(const ListType new_list, const UserDict &dict, int num);
 #endif  // !SELECT_WORD_INTERFACE_H
 

@@ -24,22 +24,10 @@
     <ClCompile Include="user.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="operation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="operation_search.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="load_user_dict_strategy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="load_user_dict_simple.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="user_word.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="load_basic_dcit_simple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="load_basic_dict_strategy.cpp">
@@ -49,9 +37,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="basic_word.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="operation_memorize.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="select_word_interface.cpp">
@@ -72,6 +57,9 @@
     <ClCompile Include="logger_json.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="user_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sentence.h">
@@ -86,31 +74,13 @@
     <ClInclude Include="user.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="shell_windows.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="operation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="operation_search.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="dict_template.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="user_dict.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="load_user_dict_strategy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="load_user_dict_simple.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="user_word.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="load_basic_dict_simple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="load_basic_dict_strategy.h">
@@ -120,9 +90,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="basic_word.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="operation_memorize.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="select_word_interface.h">
@@ -146,30 +113,33 @@
     <ClInclude Include="logger_json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dict_template.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="out.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="dict_txt_simple.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="userdata_zly.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="user_simple.ini">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="..\README.md">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="makefile">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="dict.json">
+    <None Include="res\data_zly.json">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="res\dict.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\dict-small.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\userlist.json">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="res\out.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

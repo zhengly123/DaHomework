@@ -1,6 +1,6 @@
 #pragma once
+#include<set>
 #include"basic_word.h"
-#include"set"
 #include"dict_template.h"
 //基础词典类，保存完整词库和解释
 using BasicDict = DictTemplate<BasicWord>;

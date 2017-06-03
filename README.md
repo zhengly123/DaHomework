@@ -1,35 +1,10 @@
 # DaHomework
-## 更新日志
-### 2017年5月17日20:34:29 zly
-	Changes
-	1.完成命令行交互的初步功能（登陆部分）
-	2.完成词库、搜索等功能
-	TODOs
-	1.user的sign up模块
-### 2017年5月18日18:20:02 zly
-	Changes
-	1.实现sign up模块
-	2.修复ShellWindows中逻辑错误
-	TODOs
-	1.shell中的搜索、测试模块
-	2.user setting模块
-### 2017年5月19日00:01:07 zly
-	Changes
-	1.重构word、dict等接口
-	TODOs
-	1.shell中的搜索、测试模块
-	2.user setting模块
-### 2017年5月19日10:23:23 zly
-	Changes
-	1.完成user setting模块
-	TODOs
-	1.shell中的搜索、测试模块
-	2.文件读写，格式规范
-	IMPORTANT：dict的复制、初始化设置！！
-### 2017年5月20日19:42:57 zly
-	Changes
-	1.完成shell测试模块前半部分
-	2.完成了单词获取部分
-	TODOs
-	1.shell中的测试生成？要不要写
-	2.文件读写，格式规范
+## 注意事项
+### 字典的拷贝
+BasicDict,UserDict拷贝效率很低
+###Debug时使用dict-small.json而不是dict.json
+dict-small.json是缩小的字典，在Debug模式中dict.json的读取非常慢
+###不要使用Notepad编辑词库
+Notepad会自动储存为UTF-8 with BOM格式，程序没有做BOM的预处理。必须保存为UTF-8 without BOM格式。
+###Resource Files存储在\Palabra\res下
+Resource Files与Source Files分离存储

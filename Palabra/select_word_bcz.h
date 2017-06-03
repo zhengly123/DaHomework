@@ -27,8 +27,10 @@ public:
 	virtual ~SelectWordBcz();
 	// 选择模式
 	virtual UserWord Select() override;
-	virtual void Update(const UserWord word) override;//word的tag等更新应该由外部操作来完成
-
+	virtual void Update(UserWord word) override;//word的tag等更新应该由外部操作来完成
+	virtual int NumberOfRestNewWord() override;
+	virtual int NumberOfRestOldWord() override; 
+	virtual bool Empty() override;
 private:
 	std::priority_queue<UserWord, std::vector<UserWord>, Compare> heap;
 	//UserWord last_word_;

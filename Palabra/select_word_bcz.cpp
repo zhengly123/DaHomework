@@ -79,14 +79,34 @@ UserWord SelectWordBcz::Select()
 	return word;
 }*/
 
-void SelectWordBcz::Update(const UserWord word)
+void SelectWordBcz::Update(UserWord word)
 {
-	if (word.importance==1)
+	if (updated)
+		throw logic_error("Have been updated!");
+
+	if (word.importance == 0) word.importance = 1;
+	if (word.review_num - word.error_num >= 2) word.importance = -1;//自动加入不复习
+	if (word.importance == 1)
 		heap.push(word);
 	user_dict_->insert(word);
 	updated = true;
 	//dict_.insert(last_word_);//析构时更新
 	//memset(&last_word_, 0, sizeof(last_word_));
+}
+
+int SelectWordBcz::NumberOfRestNewWord()
+{
+	return new_word_list_.cend() - next_word_;
+}
+
+int SelectWordBcz::NumberOfRestOldWord()
+{
+	return heap.size();
+}
+
+bool SelectWordBcz::Empty()
+{
+	return (NumberOfRestNewWord() + NumberOfRestOldWord() == 0);
 }
 
 //inline void SelectWordBcz::SetLastWord(std::string word)
