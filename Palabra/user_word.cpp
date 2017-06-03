@@ -22,3 +22,4 @@ std::ostream &operator<<(std::ostream & os, const UserWord & user_word)
 	//}
 	return os;
 }
+

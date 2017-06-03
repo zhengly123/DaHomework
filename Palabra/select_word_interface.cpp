@@ -35,3 +35,25 @@ std::vector<std::string> GetThreeWord(const ListType & list, const std::string w
 	return ret;
 }
 
+ListType GetNewWordList(const ListType new_list, const UserDict & dict, int num)
+{
+	ListType list;
+	int cnt = 0;
+	for (const auto &i : new_list)
+		if (dict.Search(i).review_num == 0)
+		{
+			list.push_back(i);
+			if (++cnt >= num) break;
+		}
+	return list;
+}
+
+ListType GetOldWordList(const UserDict &dict)
+{
+	ListType list;
+	for (auto i = dict.cbegin(); i != dict.cend(); ++i)
+		if (i->importance == 1)
+			list.push_back(i->word);
+	return list;
+}
+

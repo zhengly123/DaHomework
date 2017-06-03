@@ -20,7 +20,7 @@ bool LoadBasicDictJson::Load(const std::string & path, BasicDict & dict)
 		BasicWord word;
 		word.word = i["word"].asString();
 		word.phonetic = i["pho"].asString();
-		word.importance = -1;
+		//word.importance = -1;
 		for (auto j = i["tag"].begin(); j != i["tag"].end(); ++j)
 			word.tag.push_back(j->asString());
 		for (const auto &j : i["mean"])

@@ -147,21 +147,17 @@
     <ClCompile Include="jsoncpp.cpp" />
     <ClCompile Include="load_user_dict_json.cpp" />
     <ClCompile Include="logger_json.cpp" />
-    <ClCompile Include="operation_memorize.cpp" />
     <ClCompile Include="select_word_bcz.cpp" />
     <ClCompile Include="select_word_interface.cpp" />
     <ClCompile Include="load_basic_dict_json.cpp" />
     <ClCompile Include="user_dict.cpp" />
-    <ClCompile Include="load_basic_dcit_simple.cpp" />
     <ClCompile Include="load_basic_dict_strategy.cpp" />
-    <ClCompile Include="load_user_dict_simple.cpp" />
     <ClCompile Include="load_user_dict_strategy.cpp" />
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="operation.cpp" />
-    <ClCompile Include="operation_search.cpp" />
     <ClCompile Include="user.cpp" />
     <ClCompile Include="basic_word.cpp" />
+    <ClCompile Include="user_info.cpp" />
     <ClCompile Include="user_word.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -170,20 +166,14 @@
     <ClInclude Include="load_user_dict_json.h" />
     <ClInclude Include="json\json.h" />
     <ClInclude Include="load_basic_dict_json.h" />
-    <ClInclude Include="load_basic_dict_simple.h" />
     <ClInclude Include="load_basic_dict_strategy.h" />
-    <ClInclude Include="load_user_dict_simple.h" />
     <ClInclude Include="load_user_dict_strategy.h" />
     <ClInclude Include="logger.h" />
     <ClInclude Include="logger_json.h" />
     <ClInclude Include="meaning.h" />
-    <ClInclude Include="operation.h" />
-    <ClInclude Include="operation_memorize.h" />
-    <ClInclude Include="operation_search.h" />
     <ClInclude Include="select_word_bcz.h" />
     <ClInclude Include="select_word_interface.h" />
     <ClInclude Include="sentence.h" />
-    <ClInclude Include="shell_windows.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="user_dict.h" />
     <ClInclude Include="basic_word.h" />
@@ -191,15 +181,15 @@
     <ClInclude Include="user_word.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="dict_txt_simple.txt" />
-    <Text Include="out.txt" />
-    <Text Include="userdata_zly.txt" />
+    <None Include="..\README.md" />
+    <None Include="makefile" />
+    <None Include="res\data_zly.json" />
+    <None Include="res\dict-small.json" />
+    <None Include="res\dict.json" />
+    <None Include="res\userlist.json" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\README.md" />
-    <None Include="dict.json" />
-    <None Include="makefile" />
-    <None Include="user_simple.ini" />
+    <Text Include="res\out.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

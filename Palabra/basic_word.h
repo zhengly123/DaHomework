@@ -14,7 +14,7 @@ struct BasicWord
 	//音标
 	std::string phonetic;
 	std::vector<Meaning> meaning;
-	int importance;
+	int importance;//该属性暂时不用
 	//字典标签，例如CET-4
 	std::vector<std::string> tag;
 	//重载流输出

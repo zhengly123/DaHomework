@@ -20,4 +20,6 @@ struct UserInfo
 	vector<pair<Date, int>> history;//背单词的历史记录
 };
 
+Date GetCurrentDate();
+
 #endif  // !USER_INFO_H
