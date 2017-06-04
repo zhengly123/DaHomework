@@ -8,3 +8,5 @@ dict-small.json是缩小的字典，在Debug模式中dict.json的读取非常慢
 Notepad会自动储存为UTF-8 with BOM格式，程序没有做BOM的预处理。必须保存为UTF-8 without BOM格式。
 ### Resource Files存储在\Palabra\res下
 Resource Files与Source Files分离存储
+### UserDict中的last_time是time(NULL)的返回值
+可以使用gmtime()函数将其转化为普通的日期

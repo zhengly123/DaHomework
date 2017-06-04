@@ -19,7 +19,7 @@ public:
 protected:
 	virtual bool load_user_list(UserListType &user_list) = 0;
 	virtual bool save_user_list(const UserListType &user_list) = 0;
-private:
 	UserListType user_list_;
+private:
 };
 

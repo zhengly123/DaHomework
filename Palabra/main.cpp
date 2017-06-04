@@ -27,7 +27,7 @@ void exp2()
 {
 	LoadBasicDictJson loader;
 	BasicDict dict;
-	loader.Load("dict-small.json", dict);//载入词库文件
+	loader.Load(R"(res\dict-small.json)", dict);//载入词库文件
 	cout<<dict.Search("American");//查找单词
 	auto full_word_list = dict.ToWordList();//得到完整词表
 	auto GRE_Word_list = dict.ToWordList("GRE");//得到GRE词表
@@ -35,7 +35,8 @@ void exp2()
 //登陆与UserDict, UserInfo
 void exp3()
 {
-	LoggerJson logger("userlist.json");//logger初始化时绑定文件
+	LoggerJson logger(R"(res\userlist.json)");//logger初始化时绑定文件
+	logger.Load();//加载文件
 	User user;
 	user.username_ = "zhengly123", user.password_ = "111111";
 	if (logger.Login(user))//if (logger.signin(user))就是注册
@@ -51,8 +52,8 @@ void exp3()
 	UserDict dict;
 	UserWord word = {};
 	UserInfo info = {}, info2 = {};
-	load.Load("data_zly.json", dict, info);//载入UserDict, UserInfo
-	load.Save("data_zly1.json", dict, info);//保存
+	load.Load(R"(res\data_zly.json)", dict, info);//载入UserDict, UserInfo
+	load.Save(R"(res\data_zly1.json)", dict, info);//保存
 }
 //背单词
 void exp4()
@@ -62,8 +63,8 @@ void exp4()
 	BasicDict basic_dict;
 	UserDict user_dict;
 	UserInfo info;
-	load_basic.Load("dict.json", basic_dict);
-	load_user.Load("data_zly.json", user_dict, info);
+	load_basic.Load(R"(res\dict-small.json)", basic_dict);
+	load_user.Load(R"(res\data_zly.json)", user_dict, info);
 
 	ListType new_word, old_word;
 	old_word = GetOldWordList(user_dict);//获得旧词
@@ -97,10 +98,10 @@ void exp4()
 
 int main()
 {
-	//exp1();
-	//exp2();
-	//exp3();
-	//exp4();
+	exp1();
+	exp2();
+	exp3();
+	exp4();
 }
 
 

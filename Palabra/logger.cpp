@@ -3,9 +3,10 @@
 
 
 Logger::Logger(std::string path)
-	:path_(path)
+	:path_(path), user_list_(NULL)
 {
-	Load();
+	//user_list_.push_back(User());
+	//Load();
 }
 
 
