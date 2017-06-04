@@ -3,6 +3,7 @@
 #define DICT_TEMPLATE_H
 #include<set>
 #include<vector>
+#include<algorithm>
 
 using ListType = std::vector<std::string>;//单词表类型，用于储存单词表，不带有多余数据
 //词典模板
@@ -29,7 +30,7 @@ public:
 	const ListType ToWordList(std::string tag) const;
 private:
 	//空对象，用于判断是不是返回了一个空值，即这个单词在词典中不存在。
-	const T EmptyObject;
+	//const T EmptyObject;
 };
 
 template<typename T>

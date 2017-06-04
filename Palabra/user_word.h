@@ -17,7 +17,6 @@ struct UserWord
 	int last_time;//最后一次复习时间
 	int importance;//重要性:0未背过，1待复习，-1已记住
 
-	friend bool operator<(const UserWord& a, const UserWord& b);
 	//重载流输出
 	friend std::ostream &operator<<(std::ostream &o, const UserWord &user_word);
 	//根据单词字母序排序

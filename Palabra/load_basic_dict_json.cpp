@@ -28,6 +28,7 @@ bool LoadBasicDictJson::Load(const std::string & path, BasicDict & dict)
 			Meaning meaning;
 			meaning.part_of_speech = j["PoS"].asString();
 			meaning.chinese_meaning = j["exp"].asString();
+			word.meaning.push_back(meaning);
 		}
 		dict.insert(word);
 	}

@@ -1,6 +1,7 @@
 #include "select_word_bcz.h"
 #include<ctime>
 #include<exception>
+#include<stdexcept>
 
 SelectWordBcz::~SelectWordBcz()
 {
@@ -17,9 +18,9 @@ UserWord SelectWordBcz::Select()
 		throw logic_error("UserDict have not been updated!");
 	UserWord word;
 	if (mode_ == 1 && next_word_ == new_word_list_.cend())
-		throw exception("No more new word!");
+		throw out_of_range("No more new word!");
 	if (mode_ == 2 && heap.empty())
-		throw exception("No more old word!");
+		throw out_of_range("No more old word!");
 	bool old = 0;
 	if (mode_ != 0) old = (mode_ == 2);
 	else
