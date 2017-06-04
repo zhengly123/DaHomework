@@ -1,5 +1,6 @@
 #include "select_word_interface.h"
-
+#include<exception>
+#include<stdexcept>
 SelectWordInterface::SelectWordInterface(const ListType new_word_list,
 	const ListType old_word_list, const BasicDict & basic_dict,
 	UserDict & user_dict, const int mode)
@@ -16,6 +17,8 @@ SelectWordInterface::~SelectWordInterface()
 std::vector<std::string> GetThreeWord(const ListType & list, const std::string word)
 {
 	std::vector<std::string> ret;
+	if (list.size() < 4)
+		throw std::logic_error("WordList is too small!");
 	for (int i = 0; i < 3; )
 	{
 		auto t = list[rand() % list.size()];

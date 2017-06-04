@@ -127,9 +127,6 @@
     <None Include="res\data_zly.json">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="res\dict.json">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="res\dict-small.json">
       <Filter>Resource Files</Filter>
     </None>

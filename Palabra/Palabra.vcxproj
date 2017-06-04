@@ -185,7 +185,6 @@
     <None Include="makefile" />
     <None Include="res\data_zly.json" />
     <None Include="res\dict-small.json" />
-    <None Include="res\dict.json" />
     <None Include="res\userlist.json" />
   </ItemGroup>
   <ItemGroup>

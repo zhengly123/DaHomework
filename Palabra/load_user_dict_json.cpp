@@ -1,6 +1,7 @@
 #include "load_user_dict_json.h"
 #include "json/json.h"
 using namespace Json;
+const std::string InitString= R"({"dict":[],"history":[],"lev":"senior","num":30})";
 LoadUserDictJson::LoadUserDictJson()
 {
 }
@@ -16,6 +17,15 @@ bool LoadUserDictJson::Load(const std::string & path, UserDict & dict, UserInfo 
 	Value root;
 	Date date = {};
 	UserWord word = {};
+	if (is.fail())//如果文件不存在，创建新文件
+	{
+		ofstream *os = new ofstream(path);
+		(*os) << InitString;
+		os->close();
+		delete os;
+		is.close();
+		is.open(path);
+	}
 	is >> root;
 	info.level = root[JLevel].asString();
 	info.daily_number_of_word = root[JDailyNumberOfWord].asInt();

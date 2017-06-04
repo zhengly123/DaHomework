@@ -1,5 +1,7 @@
 #include "load_basic_dict_json.h"
 #include "json/json.h"
+#include<exception>
+#include<stdexcept>
 using namespace Json;
 LoadBasicDictJson::LoadBasicDictJson()
 {
@@ -13,6 +15,8 @@ bool LoadBasicDictJson::Load(const std::string & path, BasicDict & dict)
 {
 	std::string word_spelling, PoS, translation, sentence;
 	std::ifstream is(path);
+	if (is.fail())
+		throw RuntimeError("Input failure");
 	Value root;
 	is >> root;
 	for (const auto &i : root)

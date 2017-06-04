@@ -66,16 +66,18 @@ void exp4()
 	load_basic.Load(R"(res\dict-small.json)", basic_dict);
 	load_user.Load(R"(res\data_zly.json)", user_dict, info);
 
-	ListType new_word, old_word;
+	ListType new_word, old_word, full_word;
+	full_word = basic_dict.ToWordList("senior");
 	old_word = GetOldWordList(user_dict);//获得旧词
 	//获得新词(最后一个参数是请求的新词个数，但不一定有这么多)
-	new_word = GetNewWordList(basic_dict.ToWordList("GRE"), user_dict, 20);
+	new_word = GetNewWordList(full_word, user_dict, 20);
 	//传入新单词列表，复习单词列表，两个词库，模式设定
 	//模式设置中：0为混合，1为新学习，2为复习
 	SelectWordBcz sel(new_word, old_word, basic_dict, user_dict, 0);
 	//while (需要继续背诵)//根据sel.Empty()判断，或者根据新词的个数判断
 	//{
 	//	auto user_word = sel.Select();//获得一个新单词
+	//	auto t = GetThreeWord(full_word, user_word.word);//获得另外三个错误选项
 	//	用户背诵、操作完成后
 	//	更新UserWord
 	//	user_word.last_time = time(NULL);
