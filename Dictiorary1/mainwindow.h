@@ -7,6 +7,14 @@
 #include "searchdialog.h"
 #include "userdialog.h"
 #include "pkdialog.h"
+#include"user_dict.h"
+#include"user_word.h"
+#include"select_word_bcz.h"
+#include"load_basic_dict_json.h"
+#include"logger_json.h"
+#include "trietree.h"
+#include "json/json.h"
+#include"load_user_dict_json.h"
 #include "welcomedialog.h"
 #include "searchbox.h"
 #include <QMainWindow>
@@ -17,21 +25,34 @@
 #include <QPoint>
 #include <QObject>
 #include<fstream>
-#include"user_dict.h"
-#include"user_word.h"
-#include"select_word_bcz.h"
-#include"load_basic_dict_json.h"
-#include"load_user_dict_json.h"
-#include"logger_json.h"
-#include "trietree.h"
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QRect>
+#include <QObject>
+#include <QPainter>
+#include <QImage>
+#include <QMessageBox>
+#include <QIcon>
+#include <QApplication>
+#include <QDebug>
 class MainWindow : public QMainWindow
+
 {
     Q_OBJECT
 
     public:
-     BasicDict dict;
+        BasicDict dict;
         MainWindow(QWidget *parent = 0);
         ~MainWindow();
+        ListType new_word, old_word;
+        UserDict user_dict;
+        UserInfo info;
+        LoadBasicDictJson loader;
+        LoadUserDictJson load_user;
+
+        //old_word = GetOldWordList(user_dict);//获得旧词
+//获得新词(最后一个参数是请求的新词个数，但不一定有这么多)
 
         QString target="请输入你要查找的单词";//待搜索的目标单词
 
@@ -52,7 +73,7 @@ class MainWindow : public QMainWindow
         Trie* root;
         SearchDialog *searchdia=new SearchDialog(this);
         UserDialog *userdia=new UserDialog(this);
-        BookDialog *bookdia=new BookDialog(this);
+        BookDialog *bookdia;//=new BookDialog(user_dict,dict,this);
         PkDialog *pkdia=new PkDialog(this);
         LogfileDialog *logfiledia=new LogfileDialog(this);
         FeedbackDialog *feedbackdia=new FeedbackDialog(this);

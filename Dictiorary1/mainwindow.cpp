@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "mainwindow.h"//
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
@@ -18,10 +18,10 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowFlags(Qt::FramelessWindowHint);
     setAttribute(Qt::WA_TranslucentBackground);
     this->resize(QSize(700,500));
-
-    LoadBasicDictJson loader;
-
     loader.Load("res\\dict.json", dict);
+    load_user.Load("res\\data_zly.json", user_dict, info);
+    qDebug()<<dict.ToWordList().empty();
+    bookdia=new BookDialog(&dict,&user_dict,this);
     root= (Trie *)malloc(sizeof(Trie));
         for(int i=0;i<MAX;i++)
         {
@@ -31,6 +31,18 @@ MainWindow::MainWindow(QWidget *parent)
     opt(root,dict.ToWordList());
     //qDebug()<<dict.ToWordList().empty();
     //qDebug()<<(root==NULL)<<"mainwindow";
+
+// 现在是在搞生产单词
+//old_word = GetOldWordList(user_dict);//获得旧词
+	//获得新词(最后一个参数是请求的新词个数，但不一定有这么多)
+	//new_word = GetNewWordList(basic_dict.ToWordList("GRE"), user_dict, 20);
+
+  ListType new_word, old_word;
+  	old_word = GetOldWordList(user_dict);//获得旧词
+  	//获得新词(最后一个参数是请求的新词个数，但不一定有这么多)
+  	new_word = GetNewWordList(dict.ToWordList("GRE"), user_dict, 20);
+
+
     titlelab=new QLabel(this);
     titlelab->setGeometry(5,5,140,60);
     getwordled=new SearchBox(tr(""),this,root);
@@ -256,12 +268,3 @@ MainWindow::~MainWindow()
 {
 
 }
-
-
-
-
-
-
-
-
-

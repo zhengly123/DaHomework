@@ -1,7 +1,7 @@
 #include "bookdialog.h"
-
-BookDialog::BookDialog(QWidget *parent) :
-    QDialog(parent)
+#include <QDebug>
+BookDialog::BookDialog(BasicDict *outdict,UserDict *outuser_dict,QWidget *parent) :
+    QDialog(parent),dict(outdict),user_dict(outuser_dict)
 {
     this->setParent(parent);
     setWindowFlags(Qt::CustomizeWindowHint|Qt::FramelessWindowHint);
@@ -92,13 +92,50 @@ void BookDialog::btn8_clicked()
     check();
     feed();
 }
+QString BookDialog::oopt(string target)
+{
+    QString ans = "";
+    vector<Meaning> ivector = ((*dict).Search(target)).meaning;
+    for (auto iter=ivector.begin();iter!=ivector.end();iter++)
+    ans += QString::fromStdString((*iter).part_of_speech) + " " +QString::fromStdString((*iter).chinese_meaning)+" ";
+    return ans;
+}
 
 void BookDialog::getwords()
 {
     switch (wordkind)
     {
         case 1:
-            break;
+    {
+          srand(time(NULL));
+/*vector<Meaning> ivector = kk.meaning;
+    qDebug()<<(int)(dict.Search(target.toStdString()).meaning.size());
+    for (auto iter=ivector.begin();iter!=ivector.end();iter++)
+        {
+            out += QString::fromStdString((*iter).part_of_speech) + " " +QString::fromStdString((*iter).chinese_meaning) + "\n";
+        }*/
+        ListType new_word,wrong_word;
+        new_word = GetNewWordList((*dict).ToWordList(), (*user_dict), 10);
+        qDebug()<<new_word.empty();
+        word = QString::fromStdString(*(new_word.begin()));
+        string goodword = *(new_word.begin());
+        //string rightans = (*dict).search(*(new_word.begin())).
+        //qDebug()<<word;
+        wrong_word = GetThreeWord((*dict).ToWordList(),*(new_word.begin()));
+        string badword[3];
+        int i=0;
+        for(auto iter = wrong_word.begin();iter!=wrong_word.end();iter++)
+        {
+            badword[i++] = *iter;
+        }
+        int k = rand()%4;
+        correctanswer = k+1;
+        ans[k] = oopt(goodword);
+        ans[(k+1)%4] = oopt(badword[0]);
+        ans[(k+2)%4] = oopt(badword[1]);
+        ans[(k+3)%4] = oopt(badword[2]);
+        break;
+    }
         case 2:
             break;
         case 3:
@@ -114,7 +151,12 @@ void BookDialog::getwords()
 
 void BookDialog::showwords()
 {
-
+    lab->setText(word);
+        btn5->setText(ans[0]);
+        btn6->setText(ans[1]);
+        btn7->setText(ans[2]);
+        btn8->setText(ans[3]);
+        //在getwords或在这里设置correctanswer均可
 }
 
 void BookDialog::check()

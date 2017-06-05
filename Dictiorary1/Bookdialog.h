@@ -7,20 +7,32 @@
 #include <QRadioButton>
 #include <QTextEdit>
 #include <QString>
-
+#include <cstdlib>
+#include <ctime>
+#include"user_dict.h"
+#include"user_word.h"
+#include"select_word_bcz.h"
+#include"load_basic_dict_json.h"
+#include"logger_json.h"
+#include "trietree.h"
+#include "json/json.h"
+#include"load_user_dict_json.h"
 class BookDialog : public QDialog
 {
     Q_OBJECT
 
     public:
-        explicit BookDialog(QWidget *parent = 0);
+        explicit BookDialog(BasicDict*,UserDict*,QWidget *parent = 0);
         ~BookDialog();
-
+        BasicDict *dict;
+        UserDict *user_dict;
         int wordkind=0;//单词的类属
         int correctanswer=1;//解析得到的答案
         int useranswer=2;//用户给出的答案
         bool result=false;//用户答题结果
-        QString word=0;//得到的单词信息
+        QString word;//得到的单词信息
+        QString ans[4];
+        QString oopt(string target);
 
         QPushButton *btn1=new QPushButton(tr("CET"),this);
         QPushButton *btn2=new QPushButton(tr("考研"),this);

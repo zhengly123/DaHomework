@@ -62,7 +62,7 @@ QStringList GetComplete(QString input,Trie* root)
            {
                if(temp->next[j]!=NULL)
                {
-                   qDebug()<<char('a'+j);
+                   //qDebug()<<char('a'+j);
                   q.push(temp->next[j]);
                   stringq.push(tempstring+char('a'+j));
                }
