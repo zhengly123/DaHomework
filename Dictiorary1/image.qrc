@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>title.jpg</file>
+        <file>close.jpg</file>
+        <file>min.jpg</file>
+        <file>background1.jpg</file>
+        <file>background2.png</file>
+        <file>background4.gif</file>
+        <file>background3.jpg</file>
+        <file>61a58PICtPr_1024.jpg</file>
+    </qresource>
+</RCC>
