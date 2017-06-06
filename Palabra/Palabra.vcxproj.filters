@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Base64">
+      <UniqueIdentifier>{b4f777a8-32ff-4962-bf4c-b920a053f21c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Record">
+      <UniqueIdentifier>{11c09bb9-e4ad-498c-b1da-022a44247bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Base64">
+      <UniqueIdentifier>{b32fed5a-8db0-4a7f-a813-04ffc054ec0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Record">
+      <UniqueIdentifier>{58049d6c-44d2-423e-bd5e-c56aa4ad3ec5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -58,6 +70,27 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="user_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modp_base64\base64.cpp">
+      <Filter>Source Files\Base64</Filter>
+    </ClCompile>
+    <ClCompile Include="modp_base64\file_encode_base64.cpp">
+      <Filter>Source Files\Base64</Filter>
+    </ClCompile>
+    <ClCompile Include="modp_base64\modp_b64.cpp">
+      <Filter>Source Files\Base64</Filter>
+    </ClCompile>
+    <ClCompile Include="portaudio\write_wav.c">
+      <Filter>Source Files\Record</Filter>
+    </ClCompile>
+    <ClCompile Include="portaudio\record.c">
+      <Filter>Source Files\Record</Filter>
+    </ClCompile>
+    <ClCompile Include="FileComment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileCommentTxt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -116,6 +149,36 @@
     <ClInclude Include="dict_template.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="file_encode_base64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modp_base64\base64.h">
+      <Filter>Header Files\Base64</Filter>
+    </ClInclude>
+    <ClInclude Include="modp_base64\file_encode_base64.h">
+      <Filter>Header Files\Base64</Filter>
+    </ClInclude>
+    <ClInclude Include="modp_base64\modp_b64.h">
+      <Filter>Header Files\Base64</Filter>
+    </ClInclude>
+    <ClInclude Include="modp_base64\modp_b64_data.h">
+      <Filter>Header Files\Base64</Filter>
+    </ClInclude>
+    <ClInclude Include="portaudio\write_wav.h">
+      <Filter>Header Files\Record</Filter>
+    </ClInclude>
+    <ClInclude Include="portaudio\record.h">
+      <Filter>Header Files\Record</Filter>
+    </ClInclude>
+    <ClInclude Include="portaudio\portaudio.h">
+      <Filter>Header Files\Record</Filter>
+    </ClInclude>
+    <ClInclude Include="FileComment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileCommentTxt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">
@@ -131,6 +194,10 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="res\userlist.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ClassDiagram.cd" />
+    <None Include="comment.in">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

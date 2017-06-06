@@ -5,6 +5,7 @@
 #include"load_basic_dict_json.h"
 #include"load_user_dict_json.h"
 #include"logger_json.h"
+#include"FileCommentTxt.h"
 using namespace std;
 //单词类的组成
 void exp1()
@@ -47,11 +48,14 @@ void exp3()
 	{
 		//登录失败
 	}
-	
 	LoadUserDictJson load;
 	UserDict dict;
 	UserWord word = {};
 	UserInfo info = {}, info2 = {};
+	word.word = "word";
+	word.favor = 1;
+	word.note = "worud";
+	dict.insert(word);
 	load.Load(R"(res\data_zly.json)", dict, info);//载入UserDict, UserInfo
 	load.Save(R"(res\data_zly1.json)", dict, info);//保存
 }
@@ -97,13 +101,43 @@ void exp4()
 	//info.history.push_back(make_pair(current_date, 背单词个数));
 	//load_user.Save("data_zly.json", user_dict, info);//写入文件
 }
+//音频输入和编码
+#include"portaudio\portaudio.h"
+#include"portaudio\record.h"
+#include"modp_base64\file_encode_base64.h"
+void exp5()
+{
+	string base64;
+	int record_fail, convert_fail;
+	record_fail = Record();//录制3s，存入test.wav
+	if (record_fail)
+		throw runtime_error("Failed to record audio or save it");
+	convert_fail = ConvertFileToBase64("test.wav", base64);
+	if (convert_fail)
+		throw runtime_error("Failed to open the file");
+	//ofstream os("father_base64.txt");
+	//os << base64;
+}
+
+void exp6()
+{
+	FileCommentTxt commenter;//文本注释 类
+	LoadBasicDictJson loader;
+	BasicDict dict;
+	loader.Load(R"(res\dict-small.json)", dict);//加载basic词库
+	commenter.Load("comment.in");//读入文本
+	commenter.parse(dict, dict.ToWordList());//注释（词库，需要注释的单词）
+	commenter.Save("comment.out");//输出注释后的文本
+}
 
 int main()
 {
-	exp1();
-	exp2();
-	exp3();
-	exp4();
+	//exp1();
+	//exp2();
+	//exp3();
+	//exp4();
+	//exp5();
+	exp6();
 }
 
 

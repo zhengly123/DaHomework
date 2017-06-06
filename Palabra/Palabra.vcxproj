@@ -144,9 +144,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FileComment.cpp" />
+    <ClCompile Include="FileCommentTxt.cpp" />
     <ClCompile Include="jsoncpp.cpp" />
     <ClCompile Include="load_user_dict_json.cpp" />
     <ClCompile Include="logger_json.cpp" />
+    <ClCompile Include="modp_base64\base64.cpp" />
+    <ClCompile Include="modp_base64\file_encode_base64.cpp" />
+    <ClCompile Include="modp_base64\modp_b64.cpp" />
+    <ClCompile Include="portaudio\record.c" />
+    <ClCompile Include="portaudio\write_wav.c" />
     <ClCompile Include="select_word_bcz.cpp" />
     <ClCompile Include="select_word_interface.cpp" />
     <ClCompile Include="load_basic_dict_json.cpp" />
@@ -163,6 +170,9 @@
   <ItemGroup>
     <ClInclude Include="basic_dict.h" />
     <ClInclude Include="dict_template.h" />
+    <ClInclude Include="FileComment.h" />
+    <ClInclude Include="FileCommentTxt.h" />
+    <ClInclude Include="file_encode_base64.h" />
     <ClInclude Include="load_user_dict_json.h" />
     <ClInclude Include="json\json.h" />
     <ClInclude Include="load_basic_dict_json.h" />
@@ -171,6 +181,13 @@
     <ClInclude Include="logger.h" />
     <ClInclude Include="logger_json.h" />
     <ClInclude Include="meaning.h" />
+    <ClInclude Include="modp_base64\base64.h" />
+    <ClInclude Include="modp_base64\file_encode_base64.h" />
+    <ClInclude Include="modp_base64\modp_b64.h" />
+    <ClInclude Include="modp_base64\modp_b64_data.h" />
+    <ClInclude Include="portaudio\portaudio.h" />
+    <ClInclude Include="portaudio\record.h" />
+    <ClInclude Include="portaudio\write_wav.h" />
     <ClInclude Include="select_word_bcz.h" />
     <ClInclude Include="select_word_interface.h" />
     <ClInclude Include="sentence.h" />
@@ -182,6 +199,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="comment.in" />
     <None Include="makefile" />
     <None Include="res\data_zly.json" />
     <None Include="res\dict-small.json" />
