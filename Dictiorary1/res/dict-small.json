@@ -1,0 +1,281 @@
+[
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "艾滋病"
+      }
+    ],
+    "pho": "edz",
+    "tag": [ "senior" ],
+    "word": "AIDS"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "非洲"
+      }
+    ],
+    "pho": "'æfrikə",
+    "tag": [ "junior" ],
+    "word": "Africa"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "a",
+        "exp": "非洲的，非洲人的"
+      },
+      {
+        "PoS": "n",
+        "exp": "非洲人"
+      }
+    ],
+    "pho": "æfrkən",
+    "tag": [ "senior" ],
+    "word": "African"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "美国；美洲"
+      },
+      {
+        "PoS": "n",
+        "exp": "美国"
+      },
+      {
+        "PoS": "n",
+        "exp": "美国"
+      }
+    ],
+    "pho": "ə'merikə",
+    "tag": [ "senior", "junior" ],
+    "word": "America"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "a",
+        "exp": "美国的；美国人的"
+      },
+      {
+        "PoS": "n",
+        "exp": "美国人"
+      }
+    ],
+    "pho": "əmerkən",
+    "tag": [ "senior" ],
+    "word": "American"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "a",
+        "exp": "南极的"
+      }
+    ],
+    "pho": "æn'tɑ:ktik",
+    "tag": [ "GRE" ],
+    "word": "Antarctic"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "南极洲"
+      }
+    ],
+    "pho": "æn'tɑ:ktikə",
+    "tag": [ "senior" ],
+    "word": "Antarctica"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "4月"
+      },
+      {
+        "PoS": "n",
+        "exp": "四月"
+      }
+    ],
+    "pho": "'eiprəl",
+    "tag": [ "senior", "junior" ],
+    "word": "April"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "a",
+        "exp": "阿拉伯的"
+      },
+      {
+        "PoS": "n",
+        "exp": "阿拉伯人"
+      }
+    ],
+    "pho": "ærəb",
+    "tag": [ "senior" ],
+    "word": "Arab"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "a",
+        "exp": "阿拉伯语的"
+      },
+      {
+        "PoS": "n",
+        "exp": "阿拉伯语"
+      }
+    ],
+    "pho": "ærəbk",
+    "tag": [ "senior" ],
+    "word": "Arabic"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "a",
+        "exp": "北极的"
+      }
+    ],
+    "pho": "ɑktk",
+    "tag": [ "senior" ],
+    "word": "Arctic"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "a",
+        "exp": "亚洲（人）的"
+      },
+      {
+        "PoS": "n",
+        "exp": "亚洲人"
+      }
+    ],
+    "pho": "e(ə)n, e(ə)n",
+    "tag": [ "senior" ],
+    "word": "Asian"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "a",
+        "exp": "大西洋的"
+      }
+    ],
+    "pho": "ətlæntk",
+    "tag": [ "senior" ],
+    "word": "Atlantic"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "8月"
+      },
+      {
+        "PoS": "n",
+        "exp": "八月"
+      }
+    ],
+    "pho": "ɔ:'gʌst",
+    "tag": [ "senior", "junior" ],
+    "word": "August"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "澳洲；澳大利亚"
+      },
+      {
+        "PoS": "n",
+        "exp": "澳大利亚"
+      }
+    ],
+    "pho": "ɔ:s'treiljə",
+    "tag": [ "senior", "junior" ],
+    "word": "Australia"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "a",
+        "exp": "澳洲的，澳大利亚人的"
+      },
+      {
+        "PoS": "n",
+        "exp": "澳大利亚人"
+      }
+    ],
+    "pho": "strelən",
+    "tag": [ "senior" ],
+    "word": "Australian"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "(电脑)初学者通用符号指令码"
+      }
+    ],
+    "pho": "'beisik",
+    "tag": [ "junior" ],
+    "word": "BASIC"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "婴儿"
+      }
+    ],
+    "pho": "beb",
+    "tag": [ "senior" ],
+    "word": "Baby"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "比利时"
+      }
+    ],
+    "pho": "beldəm",
+    "tag": [ "senior" ],
+    "word": "Belgium"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "柏林"
+      }
+    ],
+    "pho": "bə:'lin",
+    "tag": [ "junior" ],
+    "word": "Berlin"
+  },
+  {
+    "mean": [
+      {
+        "PoS": "n",
+        "exp": "基督教《圣经》"
+      },
+      {
+        "exp": "基督教《圣经》",
+        "PoS": "n"
+      }
+    ],
+    "pho": "‘baibl",
+    "tag": [ "CET4", "CET6" ],
+    "word": "Bible"
+  }
+]
